@@ -1,11 +1,7 @@
 .Rproj.user
 .Rhistory
 .RData
-*.RData
-*.Ruserdata
+.Ruserdata
+*.rds
 *.xlsx
-*.csv
 data/
-.httr-oauth
-.DS_Store
-.quarto
