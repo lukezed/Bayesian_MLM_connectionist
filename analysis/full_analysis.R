@@ -284,20 +284,125 @@ hypothesis(final2_mlm_multiple, c("zlog_hp + YearG2:zlog_hp = 0",
 
 # ------ 8. Visualisation Figure 1 ------ 
 
-# 1. Model 3 (Main Effect of Belief)
-p1_test  <- conditional_effects(test_final_mlm,     "zthetaB_G")
-p1_joint <- conditional_effects(final_mlm_multiple, "zthetaB_G")
+ce_test_m3  <- conditional_effects(test_final_mlm, "zthetaB_G")
+ce_multi_m3 <- conditional_effects(final_mlm_multiple, "zthetaB_G")
+ce_test_m4  <- conditional_effects(test_final2_mlm, "zthetaB_G:Attain_Lvl")
+ce_multi_m4 <- conditional_effects(final2_mlm_multiple, "zthetaB_G:Attain_Lvl")
 
-# 2. Model 4 (Interaction: Belief * Attainment)
-p2_test  <- conditional_effects(test_final2_mlm,     "zthetaB_G:Attain_Lvl")
-p2_joint <- conditional_effects(final2_mlm_multiple, "zthetaB_G:Attain_Lvl")
+raw_y3 <- range(c(ce_test_m3$zthetaB_G$estimate__, ce_test_m3$zthetaB_G$lower__, ce_test_m3$zthetaB_G$upper__,
+                  ce_multi_m3$zthetaB_G$estimate__, ce_multi_m3$zthetaB_G$lower__, ce_multi_m3$zthetaB_G$upper__), na.rm = TRUE)
+buf3   <- diff(raw_y3) * 0.15 
+lims3  <- c(raw_y3[1] - buf3, raw_y3[2] + buf3)
 
+raw_y4 <- range(c(ce_test_m4$`zthetaB_G:Attain_Lvl`$estimate__, ce_test_m4$`zthetaB_G:Attain_Lvl`$lower__, ce_test_m4$`zthetaB_G:Attain_Lvl`$upper__,
+                  ce_multi_m4$`zthetaB_G:Attain_Lvl`$estimate__, ce_multi_m4$`zthetaB_G:Attain_Lvl`$lower__, ce_multi_m4$`zthetaB_G:Attain_Lvl`$upper__), na.rm = TRUE)
+buf4   <- diff(raw_y4) * 0.15 
+lims4  <- c(raw_y4[1] - buf4, raw_y4[2] + buf4)
+
+base_style <- list(
+  theme_bw(),
+  theme(
+    text = element_text(family = "serif", size = 10),
+    plot.title = element_text(size = 11, hjust = 0.5),
+    panel.grid = element_blank(),
+    plot.margin = unit(c(10, 10, 10, 10), "pt") 
+  ),
+  scale_x_continuous(expand = expansion(mult = 0.05)),
+  scale_y_continuous(expand = expansion(mult = 0.05))
+)
+
+p1_test <- plot(ce_test_m3, plot = FALSE)[[1]] + 
+  labs(title = "Model3 (Test)", y = "Practice", x = NULL) +
+  coord_cartesian(xlim = c(-2.2, 2.2), ylim = lims3) + base_style
+
+p1_multi <- plot(ce_multi_m3, plot = FALSE)[[1]] + 
+  labs(title = "Model3 (Joint)", y = NULL, x = NULL) +
+  coord_cartesian(xlim = c(-2.2, 2.2), ylim = lims3) + base_style + 
+  theme(axis.text.y = element_blank(), axis.ticks.y = element_blank())
+
+p2_test <- plot(ce_test_m4, plot = FALSE)[[1]] + 
+  labs(title = "Model4 (Test)", y = "Practice", x = "General belief") +
+  coord_cartesian(xlim = c(-2.2, 2.2), ylim = lims4) + 
+  base_style + theme(legend.position = "none")
+
+p2_multi <- plot(ce_multi_m4, plot = FALSE)[[1]] + 
+  labs(title = "Model4 (Joint)", y = NULL, x = "General belief", color = "PA", fill = "PA") +
+  coord_cartesian(xlim = c(-2.2, 2.2), ylim = lims4) + 
+  base_style + 
+  theme(axis.text.y = element_blank(), axis.ticks.y = element_blank(),
+        legend.position = "right")
+
+final_fig1 <- (p1_test | p1_multi) / (p2_test | p2_multi)
+print(final_fig1)
+
+ggsave(
+  filename = here("figures", "Figure_1_PA.pdf"), 
+  plot = final_fig1,
+  device = cairo_pdf, 
+  width = 8, 
+  height = 7, 
+  units = "in"
+)
 # ------ 8. Visualisation Figure 2 ------ 
 
-p_hp_4d_test  <- conditional_effects(test_4dim_mlm,     "zlog_hp")
-p_hp_4d_joint <- conditional_effects(dim4_mlm_multiple, "zlog_hp")
-p_hp_f1_test  <- conditional_effects(test_final_mlm,     "zlog_hp:YearG")
-p_hp_f1_joint <- conditional_effects(final_mlm_multiple, "zlog_hp:YearG")
+ce_test_m2  <- conditional_effects(test_4dim_mlm, "zlog_hp")
+ce_multi_m2 <- conditional_effects(dim4_mlm_multiple, "zlog_hp")
+ce_test_m3  <- conditional_effects(test_final_mlm, "zlog_hp:YearG")
+ce_multi_m3 <- conditional_effects(final_mlm_multiple, "zlog_hp:YearG")
+
+raw_y_range <- range(
+  c(ce_test_m2$zlog_hp$estimate__, ce_test_m2$zlog_hp$lower__, ce_test_m2$zlog_hp$upper__,
+    ce_multi_m2$zlog_hp$estimate__, ce_multi_m2$zlog_hp$lower__, ce_multi_m2$zlog_hp$upper__,
+    ce_test_m3$`zlog_hp:YearG`$estimate__, ce_test_m3$`zlog_hp:YearG`$lower__, ce_test_m3$`zlog_hp:YearG`$upper__,
+    ce_multi_m3$`zlog_hp:YearG`$estimate__, ce_multi_m3$`zlog_hp:YearG`$lower__, ce_multi_m3$`zlog_hp:YearG`$upper__),
+  na.rm = TRUE
+)
+y_buffer <- diff(raw_y_range) * 0.15
+y_limits <- c(raw_y_range[1] - y_buffer, raw_y_range[2] + y_buffer)
+
+year_map <- c("1" = "7", "2" = "8", "3" = "9")
+
+base_style <- list(
+  coord_cartesian(ylim = y_limits),
+  theme_bw(),
+  theme(
+    text = element_text(family = "serif", size = 10),
+    plot.title = element_text(size = 11, hjust = 0.5),
+    panel.grid = element_blank()
+  )
+)
+
+p1_test <- plot(ce_test_m2, plot = FALSE)[[1]] + 
+  labs(title = "Model 2 (Test)", y = "Practice", x = NULL) + base_style
+
+p1_multi <- plot(ce_multi_m2, plot = FALSE)[[1]] + 
+  labs(title = "Model 2 (Joint)", y = NULL, x = NULL) + base_style + 
+  theme(axis.text.y = element_blank(), axis.ticks.y = element_blank())
+
+p2_test <- plot(ce_test_m3, plot = FALSE)[[1]] + 
+  labs(title = "Model 3 (Test)", y = "Practice", x = "Housing Price") + 
+  base_style + theme(legend.position = "none")
+
+p2_multi <- plot(ce_multi_m3, plot = FALSE)[[1]] + 
+  labs(title = "Model 3 (Joint)", y = NULL, x = "Housing Price") + 
+  scale_color_discrete(labels = year_map) + 
+  scale_fill_discrete(labels = year_map) + 
+  base_style + 
+  theme(axis.text.y = element_blank(), axis.ticks.y = element_blank(),
+        legend.position = "right") 
+
+final_fig2 <- (p1_test | p1_multi) / (p2_test | p2_multi)
+
+print(final_fig2)
+
+ggsave(
+  filename = here("figures", "Figure_2_Housing_Price.pdf"), 
+  plot = final_fig2,
+  device = cairo_pdf, 
+  width = 8, 
+  height = 7, 
+  units = "in"
+)
 
 # ------ 9. Model compare ------
 
@@ -347,7 +452,6 @@ joint_sens_N05 <- brm_multiple(
   chains = 4, cores = 4, iter = 1000, warmup = 500, control = stan_control,
   file = here("models", "joint_final_mlm_sens2_N05")
 )
-
 
 
 ################################################################################
