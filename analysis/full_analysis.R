@@ -343,6 +343,15 @@ ggsave(
   height = 7, 
   units = "in"
 )
+
+ggsave(
+  filename = here("figures", "Figure_1_PA.png"), 
+  plot = final_fig1,
+  width = 8, 
+  height = 6, 
+  units = "in"
+)
+
 # ------ 8. Visualisation Figure 2 ------ 
 
 ce_test_m2  <- conditional_effects(test_4dim_mlm, "zlog_hp")
@@ -401,6 +410,14 @@ ggsave(
   device = cairo_pdf, 
   width = 8, 
   height = 7, 
+  units = "in"
+)
+
+ggsave(
+  filename = here("figures", "Figure_2_Housing_Price.png"), 
+  plot = final_fig2,
+  width = 8, 
+  height = 6, 
   units = "in"
 )
 
