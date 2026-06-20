@@ -6,3 +6,9 @@
 *.rds
 *.xlsx
 data/
+.positai
+
+# revision working files (not for remote)
+paper/oldsubmission/
+plan.md
+.DS_Store
