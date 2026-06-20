@@ -54,11 +54,11 @@ header-includes:
 
 # Introduction
 
-For global mathematics education reform agendas, there is a broad consensus among major international standards organizations that mathematics education should adopt an empowering model that connects abstract concepts with learners' lived experiences and real-world problem-solving [e.g., @nationalcouncilofteachersofmathematicsnctm2000princi; @organisationforeconomicco-operationanddevelopmentoecd2023pisa]. Within public policy and educational research, such connectionist approaches are widely regarded as indicative of more desirable classroom practices, as they promote deeper conceptual understanding, support the development of positive mathematical identities among diverse learners, reduce mathematics anxiety, and prepare students for the complex problem-solving demands of contemporary society [@boaler1998open]. This global consensus positions classroom reform not merely as a pedagogical preference, but as a necessary response to evolving societal demands, demands that traditional, teacher-centered, transmissionist approaches struggle to address.
+For global mathematics education reform agendas, there is a broad consensus among major international standards organizations that mathematics education should adopt an empowering model that connects abstract concepts with learners' lived experiences and real-world problem-solving [e.g., NCTM, -@nationalcouncilofteachersofmathematicsnctm2000princi; OECD, -@organisationforeconomicco-operationanddevelopmentoecd2023pisa]. Within public policy and educational research, such connectionist approaches are widely regarded as indicative of more desirable classroom practices, as they promote deeper conceptual understanding, support the development of positive mathematical identities among diverse learners, reduce mathematics anxiety, and prepare students for the complex problem-solving demands of contemporary society [@boaler1998open]. This global consensus positions classroom reform not merely as a pedagogical preference, but as a necessary response to evolving societal demands, demands that traditional, teacher-centered, transmissionist approaches struggle to address.
 
 Despite this consensus, a fundamental contradiction exists regarding the drivers of teachers' pedagogical choices and actions. Two competing explanatory frameworks dominate this discussion. The first centers on agency, positioning teachers' beliefs as the primary determinants of instructional decisions [@goldin2009belief; @goldin2002affect; @pajares1992teache; @thompson2006teache]. This aligns with the intuitive notion that teachers consistently practice what they believe. This perspective has inspired widespread professional development initiatives and interventions aimed at transforming classroom practice by cultivating teachers' related beliefs [e.g., @hunter2020shifti; @wright2021transfa]. In contrast, structural perspectives argue that institutional constraints and socioeconomic contexts largely override teachers' personal beliefs in shaping teaching practices, to the extent that teachers inevitably serve as accomplices in contributing to schools' reproduction of various inequalities in power and structure [as critiqued by @bourdieu1990reproda]. Schools serving different socio-economic status (SES) communities consistently demonstrate different institutional priorities and encounter different accountability pressures, and teachers frequently find themselves directed to follow specific curriculum plans and instructional approaches, subtly surrendering control over their practice to more powerful actors and forces within the educational system [@nast2022bringi]. This perspective suggests that regardless of whether teachers recognize their passive position, their capacity for resistance within education systems is severely constrained. This may help explain why many well-intentioned mathematics education reform initiatives struggle during local implementation, as teachers' reform-oriented intentions can be constrained by specific institutional pressures [@leonard2014learni; @westaway2019explor].
 
-This tension is particularly pronounced in the Chinese educational context. For decades, China's Ministry of Education has consistently advocated for educational reforms aimed at moving mathematics instruction away from traditional practices characterized by rote memorization, repetitive exercises, and competition-oriented instruction. The most recent mathematics curriculum standards introduced for the first time the "Three Capacities" as a core aim of mathematics classrooms: the capacity to observe, think about, and express the world through mathematics [@ministryofeducationofthepeoplesrepublicofchina2022compul, pp. 5--6]. This policy emphasis signals a strengthened top-down reform expectation, that the exploration of the connections between the mathematics and the real world should become a central classroom priority. However, despite substantial investment in reform initiatives and reported successes in experimental vacuum conditions such as demonstration lessons, teaching competitions, and designated experimental schools [@zhao2020episte], mathematics classroom practice in China continues to be dominated by teacher-centered and rote-oriented instruction, particularly in socioeconomically disadvantaged schools [@dello-iacovo2009currica; @yin2012curric].
+This tension is particularly pronounced in the Chinese educational context. For decades, China's Ministry of Education has consistently advocated for educational reforms aimed at moving mathematics instruction away from traditional practices characterized by rote memorization, repetitive exercises, and competition-oriented instruction. The most recent mathematics curriculum standards introduced for the first time the "Three Capacities" as a core aim of mathematics classrooms: the capacity to observe, think about, and express the world through mathematics [MoE, -@ministryofeducationofthepeoplesrepublicofchina2022compul, pp. 5--6]. This policy emphasis signals a strengthened top-down reform expectation, that the exploration of the connections between the mathematics and the real world should become a central classroom priority. However, despite substantial investment in reform initiatives and reported successes in experimental vacuum conditions such as demonstration lessons, teaching competitions, and designated experimental schools [@zhao2020episte], mathematics classroom practice in China continues to be dominated by teacher-centered and rote-oriented instruction, particularly in socioeconomically disadvantaged schools [@dello-iacovo2009currica; @yin2012curric].
 
 Building on this background, the present study investigates the agency-structure tension in mathematics teachers' practice within the Chinese context. We report findings from a study employing Bayesian multilevel modeling (MLM) to examine how teachers' belief systems and systemic factors are associated with self-reported connectionist practices, using questionnaire data from 155 teachers across 35 secondary schools in Wenzhou.
 
@@ -98,7 +98,7 @@ Despite these insights, quantitative research that directly links school-level S
 
 ## The Context of this Study
 
-This study was conducted in Wenzhou City, Zhejiang Province, China. In recent years, the city has been actively engaged in educational reform. The local education bureau has demonstrated strong interest in connectionist pedagogy, aiming to transform teachers' use of transmissionist approaches [@wenzhoumunicipalpeoplesgovernmentofficewmpgo2021jichu]. During the data collection period (March to September 2024), in response to the call from the local education bureau, schools were actively carrying out project-based learning (PBL) professional development activities [@wenzhouluchengeducationresearchinstitutewleri2024jiaoke; @wenzhouluchengeducationresearchinstitutewleri2024yi]. Policy encouragement for reform agendas undoubtedly poses a strong challenge to the traditional educational models prevalent in China. However, whether teachers in local practice contexts undergo effective transformations in both beliefs and practices as intended remains unknown.
+This study was conducted in Wenzhou City, Zhejiang Province, China. In recent years, the city has been actively engaged in educational reform. The local education bureau has demonstrated strong interest in connectionist pedagogy, aiming to transform teachers' use of transmissionist approaches [WMPGO, -@wenzhoumunicipalpeoplesgovernmentofficewmpgo2021jichu]. During the data collection period (March to September 2024), in response to the call from the local education bureau, schools were actively carrying out project-based learning (PBL) professional development activities [WLERI, -@wenzhouluchengeducationresearchinstitutewleri2024jiaoke; -@wenzhouluchengeducationresearchinstitutewleri2024yi]. Policy encouragement for reform agendas undoubtedly poses a strong challenge to the traditional educational models prevalent in China. However, whether teachers in local practice contexts undergo effective transformations in both beliefs and practices as intended remains unknown.
 
 Within the broader context of China's compulsory education system, school district policies have been implemented for a long time to ensure school-aged children can receive compulsory education near their homes. The government has established multiple strict policies limiting school choice to ensure the fairness of nearby enrollment. In Wenzhou, for example, the "sunshine admission" policy, introduced in 2012, required all public schools to make their enrollment plans, processes, and methods transparent and open to public supervision. Subsequently, the "zero school choice" policy in 2014 strictly prohibited schools from establishing additional barriers, such as entrance exams, for student selection.
 
@@ -245,8 +245,897 @@ Finally, interpreted through Bourdieu's lens, the findings highlight how teacher
 
 [^5]: For a detailed account of the construction process of the two instruments, see the technical report available at [authors' github]
 
-[^6]: Technically, the most faithful Bayesian approach would be to fit the IRT and MLM jointly within a single model, allowing for full propagation of latent variable uncertainty. However, to our knowledge, current modeling frameworks in brms do not yet support efficient syntax for passing latent variables between models, and even implementing such a fully joint model in Stan would require prohibitive computational resources. Therefore, we adopted a pragmatic two-step Bayesian approach. We first fit two separate BIRT models, then capture the uncertainty from the first step by randomly drawing plausible values from the posterior distributions, which are then passed to the subsequent analysis. Similar procedures are widely used in large-scale international assessments such as PISA, where multiple imputation is employed to sample plausible values from IRT models in order to account for uncertainty [see examples in @organisationforeconomicco-operationanddevelopmentoecd2024pisa]. In practice, this approach is preferable to the naïve frequentist solution, which only obtains and transmits single point estimates between models. Its advantages in uncertainty representation and bias reduction will also be reflected in the subsequent analyses.
+[^6]: Technically, the most faithful Bayesian approach would be to fit the IRT and MLM jointly within a single model, allowing for full propagation of latent variable uncertainty. However, to our knowledge, current modeling frameworks in brms do not yet support efficient syntax for passing latent variables between models, and even implementing such a fully joint model in Stan would require prohibitive computational resources. Therefore, we adopted a pragmatic two-step Bayesian approach. We first fit two separate BIRT models, then capture the uncertainty from the first step by randomly drawing plausible values from the posterior distributions, which are then passed to the subsequent analysis. Similar procedures are widely used in large-scale international assessments such as PISA, where multiple imputation is employed to sample plausible values from IRT models in order to account for uncertainty [see examples in OECD, -@organisationforeconomicco-operationanddevelopmentoecd2024pisa]. In practice, this approach is preferable to the naïve frequentist solution, which only obtains and transmits single point estimates between models. Its advantages in uncertainty representation and bias reduction will also be reflected in the subsequent analyses.
 
 [^7]: All models include gender and year group at the teacher level, and resource, housing price, and district at the school level, while Model 1 adds general belief; Model 2 adds all belief components; Model 3 adds the interaction between general belief and perceived attainment level; Model 4 adds the interaction between housing price and year group.
 
 [^8]: We specified Perceived Attainment as a monotonic effect in brms, meaning it was modelled as a latent continuous variable with a consistent (but not necessarily equal) stepwise effect, rather than as a standard categorical (factor) variable.
+
+
+# Appendix A: Items used in the belief and practice instruments
+
+P_1        I introduce a new topic by first determining what the
+             students already know about it.
+
+  P_2_r\*    I offer content matter in gradually increasing levels of
+             complexity.
+
+  P_3        I jump between topics as the needs arise.
+
+  P_4        I have my students work collaboratively in pairs.
+
+  P_5        I have my students work collaboratively in groups.
+
+  P_6        I teach each student differently according to individual
+             needs.
+
+  P_7        I encourage students to discuss the mistake they make.
+
+  P_8        Students work on extended mathematics investigations or
+             projects.
+
+  P_9        Students work on projects in which subject material from
+             various subjects is integrated.
+
+  P_10       Students make formal presentations to the rest of the class.
+
+  P_11_r\*   Students start with easy questions and work up to hard
+             questions.
+
+  P_12       Students use mathematics concepts to interpret and solve
+             applied problems.
+
+  P_13       Students play mathematical games.
+
+  P_14_r\*   Students work through exercises from textbooks or worksheets.
+
+  P_15_r\*   Students work on their own, consulting a neighbour from time
+             to time.
+
+  P_16       I choose examples that appeal to students.
+
+  P_17       I try to indicate the value of each lesson topic for future
+             use.
+
+  P_18       I encourage students to make connections to mathematical
+             concepts that may be encountered in other areas of the
+             curriculum.
+
+  P_19       When a student asks a question, I give a clue instead of the
+             correct answer.
+
+  P_20_r\*   Students use only the methods I teach them.
+
+  P_21_r\*   During instruction I ask a lot of short questions to check
+             whether students understand the content matter.
+
+  P_22       I ask students to explain their reasoning when giving an
+             answer.
+
+  P_23       I encourage students to explore alternative methods for
+             solution.
+
+  P_24_r\*   I avoid students making mistakes by explaining things
+             carefully first.
+
+  P_25_r\*   I go through only one method for doing each question.
+
+  P_26       I allow students to work at their own pace., , , , , , , , , , , , , , , , , , , , , , , , **Note:** The items used in the practice instrument. Teachers were asked
+to report the frequency with which they implement each practice using a
+5-point Likert scale ranging from 1 ("Almost never") to 5 ("Almost
+always"). Items marked with \_r indicate reverse-coded items. Items
+marked with \* were removed during the validation process., , , , , , , , , , , , , , , , , , , , , , , , Item ID    Statement, , , -, , , , , , , , , , , , , , , , , , , , -
+  Ba_1_r\*   Mathematics is a collection of rules and procedures.
+
+  Ba_2_r\*   Mathematics involves remembering and applying definitions,
+             formulas, mathematical facts and procedures.
+
+  Ba_3_r\*   To do mathematics requires much practice of correct
+             application of routines.
+
+  Ba_4_r\*   When solving mathematical tasks you need to know the correct
+             procedure in advance.
+
+  Ba_5       Mathematics involves creativity and new ideas.
+
+  Ba_6       Many aspects of mathematics have practical relevance.
+
+  Ba_7       Mathematics helps solve everyday problems and tasks.
+
+  Ba_8       In mathematics many things can be discovered and tried out by
+             oneself.
+
+  Bb_1_r     Students must be able to solve mathematics problems quickly.
+
+  Bb_2       Students must be able to understand why the answer is
+             correct.
+
+  Bb_3_r     Students learn mathematics best by attending to the teacher's
+             standard explanations.
+
+  Bb_4_r     For students, non-standard procedures can interfere with
+             learning the correct procedure.
+
+  Bb_5       Students can figure out a way to solve mathematical problems
+             without a teacher's help.
+
+  Bb_6_r     Only the more able students can participate in mathematics
+             activities.
+
+  Bb_7_r     To be good at mathematics one needs to be talented.
+
+  Bb_8_r     Among other forms of talent, mathematical talent is
+             relatively fixed.
+
+  Bb_9_r     Boys tend to be more talented in mathematics than girls.
+
+  Bb_10_r    Attention to mathematically weak students can interfere with
+             the learning experience of other students.
+
+  Bb_11_r    Attention to mathematically talented students can interfere
+             with the learning experience of other students.
+
+  Bc_1_r     Innovative pedagogy (e.g., project-based learning, flipped
+             classroom) is not worth the time and expense.
+
+  Bc_2_r     Innovative pedagogy (e.g., project-based learning, flipped
+             classroom) should only play a minor, supplementary role in
+             the mathematics classroom.
+
+  Bc_3       I'm continuously seeking better ways to teach mathematics.
+
+  Bc_4       Teachers should help students using mathematics to critically
+             analyse the world.
+
+  Bc_5       Discussion of social issues should be involved in the maths
+             classroom., , , , , , , , , , , , , , , , , , , , , , , , **Note:** The items used in the belief about equity instrument. Teachers
+were asked to indicate their level of agreement with each statement
+using a 5-point Likert scale ranging from 1 ("Strongly disagree") to 5
+("Strongly agree"). Items are grouped into three dimensions: Ba (Beliefs
+about Mathematics), Bb (Beliefs about Learners), and Bc (Beliefs about
+Pedagogy). Items marked with \_r indicate reverse-coded items. Items
+marked with \* were removed during the validation process.
+
+# Appendix B: Test model and joint model (model averaging under multiple imputation)
+
+**Model Averaging & handling uncertainty**
+
+In the main article, we presented results from the so-called "test
+model," which was fitted to the No. 1 imputed dataset. While this is a
+common approach and provides a concrete example, it is ultimately just
+one possible scenario among many.
+
+When working with educational data, especially after multiple
+imputation or generating plausible values from IRT models, we often end
+up with not just one, but many complete datasets. This naturally raises
+an important question: Which results should we trust? How much do
+findings depend on our choice of dataset?
+
+To illustrate this, in this supplementary document, I present the
+results of Models 2--4 fitted to test datasets No. 10 and No. 30. By
+comparing these test models to each other, and to the joint model that
+pools information across all 40 imputed datasets via Bayesian model
+averaging, we can see how certain effects vary, or even disappear, once
+we account for the full range of data uncertainty.
+
+Some effects that look strong and credible in individual test models do
+not persist in the joint model. This is not a flaw, but rather a
+strength: it shows that these effects are not stable across all
+plausible datasets. Once we average across the full range of data
+uncertainty, only the effects that are truly consistent remain. The
+joint model thus gives us a more honest and reliable summary of what the
+data really support.
+
+The following sections present detailed results for Models 2--4 using
+datasets No. 10 and No. 30, and discuss why some effects vanish in the
+joint model. This demonstrates how model averaging protects against
+over- interpreting findings that may only hold in a single version of
+the data.
+
+**Result for model 2 estimating imputed dataset 10 & 30**
+
+In the main article, belief about pedagogy (zthetaB_C) showed a credible
+positive effect in the No.1 test fit, but this effect disappeared in the
+joint fit. This actually reflects the fact that, across most plausible
+datasets, this effect is not consistently credible. Here, for imputed
+dataset No.10, the effect is 0.10 with a 95% CI of [--0.07, 0.26],
+which clearly crosses zero. For dataset No.30, the effect remains
+credible at 0.18 with a 95% CI of [0.02, 0.33]. This variability
+across different datasets demonstrates why averaging is necessary:
+results that look robust in one version of the data may not hold more
+generally., , , , , , , , , , , , , , , , , , , , , , , --
+  ## Family: gaussian\
+  ## ## ## ## ##\
+  Links: mu = identity; sigma = identity\
+  ## Formula: ztheta_P ~ zthetaB_G + zthetaB_A + zthetaB_B +
+  zthetaB_C + District + Gender + YearG + zlog_hp + z_resource +
+  moAttain_Lvl\
+  Data: final_imputed_datasets[[10]] (Number of observations: 155)\
+  Draws: 4 chains, each with iter = 1000; warmup = 500; thin = 1;\
+  total post-warmup draws = 2000\
+  ## Multilevel Hyperparameters:\
+  1\
+  ## ~Sch_ID (Number of levels: 36)\
+  ## Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS\
+  ## sd(Intercept) 0.12 0.09 0.01 0.34 1.00 857 745\
+  ##\
+  ## Regression Coefficients:\
+  ## Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS\
+  ## Intercept 0.07 0.28 -0.45 0.66 1.00 1339 1107\
+  ## zthetaB_G 0.25 0.09 0.08 0.42 1.00 2425 1160\
+  ## zthetaB_A 0.01 0.08 -0.15 0.18 1.01 3090 1302\
+  ## zthetaB_B -0.08 0.09 -0.25 0.08 1.00 2172 1270\
+  ## zthetaB_C 0.10 0.08 -0.07 0.26 1.00 3506 1701\
+  ## District2 -0.21 0.23 -0.64 0.23 1.00 2052 1399\
+  ## District3 -0.17 0.22 -0.60 0.25 1.00 1695 1496\
+  ## Gender2 -0.01 0.16 -0.31 0.32 1.00 3313 1662\
+  ## YearG2 -0.09 0.19 -0.46 0.27 1.00 2451 1695\
+  ## YearG3 -0.15 0.21 -0.55 0.26 1.00 2239 1561\
+  ## zlog_hp 0.13 0.10 -0.08 0.34 1.00 1788 1268\
+  ## z_resource -0.08 0.13 -0.33 0.17 1.00 2052 1364\
+  ## moAttain_Lvl 0.06 0.10 -0.16 0.26 1.00 1061 776\
+  ##\
+  ## Monotonic Simplex Parameters:\
+  ## Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS\
+  ## moAttain_Lvl1[1] 0.26 0.19 0.01 0.71 1.00 1960 1318\
+  ## moAttain_Lvl1[2] 0.23 0.17 0.01 0.65 1.00 2270 1161\
+  ## moAttain_Lvl1[3] 0.25 0.19 0.01 0.69 1.00 1940 1225\
+  ## moAttain_Lvl1[4] 0.26 0.19 0.01 0.71 1.00 2128 1405\
+  ##\
+  ## Further Distributional Parameters:\
+  ## Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS\
+  ## sigma 0.98 0.06 0.87 1.11 1.00 3215 1101\
+  ##\
+  ## Draws were sampled using sampling(NUTS). For each parameter,
+  Bulk_ESS\
+  ## and Tail_ESS are effective sample size measures, and Rhat is the
+  potential\
+  ## scale reduction factor on split chains (at convergence, Rhat = 1)., , , , , , , , , , , , , , , , , , , , , , , --, , , , , , , , , , , , , , , , , , , , , , , --, , , , , , , , , , , , , , , , , , , , , , , --
+  ## Family: gaussian\
+  ## Links: mu = identity; sigma = identity\
+  ## Formula: ztheta_P ~ zthetaB_G + zthetaB_A + zthetaB_B +
+  zthetaB_C + District + Gender + YearG + zlog_hp + z_resource +
+  moAttain_Lvl\
+  ## Data: final_imputed_datasets[[30]] (Number of observations:
+  155)\
+  ## Draws: 4 chains, each with iter = 1000; warmup = 500; thin = 1;\
+  ## total post-warmup draws = 2000\
+  ##\
+  ## Multilevel Hyperparameters:\
+  ## ~Sch_ID (Number of levels: 36)\
+  ## Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS\
+  ## sd(Intercept) 0.12 0.10 0.00 0.36 1.01 739 524\
+  ##\
+  ## Regression Coefficients:\
+  ## Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS\
+  ## Intercept 0.18 0.28 -0.39 0.74 1.00 2728 1558\
+  ## zthetaB_G 0.20 0.08 0.03 0.35 1.00 1498 1292\
+  ## zthetaB_A 0.02 0.08 -0.15 0.19 1.00 2007 1518\
+  ## zthetaB_B 0.04 0.08 -0.11 0.22 1.00 2644 1484\
+  ## zthetaB_C 0.18 0.08 0.02 0.33 1.00 2193 1522\
+  ## District2 -0.26 0.22 -0.68 0.16 1.00 1697 1613\
+  ## District3 -0.15 0.22 -0.58 0.27 1.00 1406 1540\
+  ## Gender2 0.00 0.16 -0.33 0.32 1.00 2826 1561\
+  ## YearG2 -0.27 0.19 -0.63 0.11 1.00 2171 1719\
+  ## YearG3 -0.16 0.21 -0.56 0.25 1.00 1877 1565\
+  ## zlog_hp 0.06 0.11 -0.15 0.26 1.00 1587 1487\
+  ## z_resource -0.04 0.13 -0.30 0.21 1.00 1847 1376\
+  ## moAttain_Lvl 0.03 0.10 -0.18 0.22 1.00 1208 928\
+  ##\
+  ## Monotonic Simplex Parameters:\
+  ## Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS\
+  ## moAttain_Lvl1[1] 0.28 0.19 0.02 0.70 1.00 1992 1237\
+  ## moAttain_Lvl1[2] 0.23 0.18 0.01 0.65 1.00 2044 1086\
+  ## moAttain_Lvl1[3] 0.22 0.17 0.01 0.66 1.00 2244 1731\
+  ## moAttain_Lvl1[4] 0.26 0.20 0.01 0.71 1.00 1888 1351\
+  ##\
+  ## Further Distributional Parameters:\
+  ## Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS\
+  ## sigma 0.98 0.06 0.88 1.10 1.00 2404 1607\
+  ##\
+  ## Draws were sampled using sampling(NUTS). For each parameter,
+  Bulk_ESS\
+  ## and Tail_ESS are effective sample size measures, and Rhat is the
+  potential\
+  ## scale reduction factor on split chains (at convergence, Rhat = 1)., , , , , , , , , , , , , , , , , , , , , , , --, , , , , , , , , , , , , , , , , , , , , , , --
+
+**Result for model 3 estimating imputed dataset 10 & 30**
+
+A similar pattern occurs in Model 3. For both test fits (No.10 and
+No.30), the effect of zthetaB_C is not credible, even though the main
+article's No.1 test fit indicated a credible effect., , , , , , , , , , , , , , , , , , , , , , , --
+  ## Family: gaussian\
+  ## Links: mu = identity; sigma = identity\
+  ## Formula: ztheta_P ~ zthetaB_G + mo(Attain_Lvl) + District +
+  Gender + zthetaB_A + zthetaB_B + zthetaB_C + YearG + zlog_hp +
+  z_resource + zlog_hp:YearG\
+  ## Data: final_imputed_datasets[[10]] (Number of observations:
+  155)\
+  ## Draws: 4 chains, each with iter = 1000; warmup = 500; thin = 1;\
+  ## total post-warmup draws = 2000\
+  ##\
+  ## Multilevel Hyperparameters:\
+  ## ~Sch_ID (Number of levels: 36)\
+  ##. Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS\
+  ## sd(Intercept) 0.15 0.11 0.01 0.40 1.01 679 850\
+  ##\
+  ## Regression Coefficients:\
+  ##. Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS\
+  ## Intercept 0.14 0.28 -0.39 0.78 1.00 1004 572\
+  ## zthetaB_G 0.25 0.08 0.09 0.41 1.00 2466 1598\
+  ## District2 -0.27 0.21 -0.69 0.15 1.00 2104 1513\
+  ## District3 -0.23 0.22 -0.64 0.20 1.00 1642 1448\
+  ## Gender2 -0.00 0.15 -0.32 0.30 1.00 2817 1526\
+  ## zthetaB_A 0.07 0.08 -0.09 0.22 1.00 3333 1429\
+  ## zthetaB_B -0.05 0.08 -0.20 0.11 1.00 3300 1652\
+  ## zthetaB_C 0.14 0.08 -0.01 0.30 1.00 2748 1686\
+  ## zlog_hp 0.65 0.14 0.37 0.91 1.00 1735 1425\
+  ## YearG2 -0.10 0.17 -0.43 0.23 1.00 2754 1583\
+  ## YearG3 -0.12 0.19 -0.50 0.26 1.00 2723 1411\
+  ## z_resource -0.08 0.13 -0.34 0.18 1.00 1993 1190\
+  ## zlog_hp:YearG2 -1.03 0.19 -1.39 -0.66 1.00 2037 1622\
+  ## zlog_hp:YearG3 -0.61 0.21 -1.02 -0.22 1.00 2328 1645\
+  ## moAttain_Lvl 0.04 0.10 -0.20 0.22 1.00 758 582\
+  ##\
+  ## Monotonic Simplex Parameters:\
+  ## Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS\
+  ## moAttain_Lvl1[1] 0.26 0.20 0.01 0.73 1.00 1138 1025\
+  ## moAttain_Lvl1[2] 0.22 0.17 0.01 0.63 1.00 2327 1224\
+  ## moAttain_Lvl1[3] 0.25 0.18 0.01 0.67 1.00 1111 1489\
+  ## moAttain_Lvl1[4] 0.28 0.20 0.01 0.72 1.00 2001 1225\
+  ##\
+  ## Further Distributional Parameters:\
+  ## Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS\
+  ## sigma 0.89 0.06 0.78 1.02 1.01 2275 1350\
+  ##\
+  ## Draws were sampled using sampling(NUTS). For each parameter,
+  Bulk_ESS\
+  ## and Tail_ESS are effective sample size measures, and Rhat is the
+  potential\
+  ## scale reduction factor on split chains (at convergence, Rhat = 1)., , , , , , , , , , , , , , , , , , , , , , , --, , , , , , , , , , , , , , , , , , , , , , , --, , , , , , , , , , , , , , , , , , , , , , , --
+  ## Family: gaussian\
+  ## Links: mu = identity; sigma = identity\
+  ## Formula: ztheta_P ~ zthetaB_G + mo(Attain_Lvl) + District +
+  Gender + zthetaB_A + zthetaB_B + zthetaB_C + YearG + zlog_hp +
+  z_resource + zlog_hp:YearG\
+  ## Data: final_imputed_datasets[[30]] (Number of observations:
+  155)\
+  ## Draws: 4 chains, each with iter = 1000; warmup = 500; thin = 1;\
+  ## total post-warmup draws = 2000\
+  ##\
+  ## Multilevel Hyperparameters:\
+  ## ~Sch_ID (Number of levels: 36)\
+  ## Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS\
+  ## sd(Intercept) 0.14 0.10 0.00 0.38 1.00 710 804\
+  ##\
+  ## Regression Coefficients:\
+  ## Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS\
+  ## Intercept 0.24 0.26 -0.27 0.74 1.00 1357 1426\
+  ## zthetaB_G 0.21 0.08 0.05 0.36 1.00 2997 1670\
+  ## District2 -0.33 0.21 -0.73 0.09 1.00 2322 1656\
+  ## District3 -0.21 0.21 -0.61 0.21 1.00 1841 1413\
+  ## Gender2 -0.01 0.16 -0.31 0.31 1.00 2813 1450\
+  ## zthetaB_A 0.04 0.08 -0.12 0.20 1.00 2796 1319\
+  ## zthetaB_B 0.04 0.08 -0.12 0.20 1.00 3143 1491\
+  ## zthetaB_C 0.15 0.08 -0.02 0.31 1.00 3239 1375\
+  ## zlog_hp 0.47 0.15 0.19 0.78 1.00 1390 1320\
+  ## YearG2 -0.28 0.18 -0.61 0.07 1.00 2448 1705\
+  ## YearG3 -0.13 0.20 -0.52 0.27 1.00 2563 1516\
+  ## z_resource -0.04 0.12 -0.28 0.18 1.00 2421 1402\
+  ## zlog_hp:YearG2 -0.84 0.20 -1.23 -0.45 1.00 1789 1663\
+  ## zlog_hp:YearG3 -0.45 0.22 -0.88 -0.01 1.00 1833 1412\
+  ## moAttain_Lvl 0.02 0.09 -0.19 0.21 1.00 1098 1012\
+  ##\
+  ## Monotonic Simplex Parameters:\
+  ## Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS\
+  ## moAttain_Lvl1[1] 0.27 0.20 0.01 0.72 1.00 2030 1135\
+  ## moAttain_Lvl1[2] 0.22 0.18 0.01 0.65 1.00 2446 1148\
+  ## moAttain_Lvl1[3] 0.24 0.19 0.01 0.71 1.00 1890 1642\
+  ## moAttain_Lvl1[4] 0.27 0.20 0.01 0.73 1.00 2013 1287\
+  ##\
+  ## Further Distributional Parameters:\
+  ## Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS\
+  ## sigma 0.93 0.06 0.82 1.05 1.00 2396 1331\
+  ##\
+  ## Draws were sampled using sampling(NUTS). For each parameter,
+  Bulk_ESS\
+  ## and Tail_ESS are effective sample size measures, and Rhat is the
+  potential\
+  ## scale reduction factor on split chains (at convergence, Rhat = 1)., , , , , , , , , , , , , , , , , , , , , , , --, , , , , , , , , , , , , , , , , , , , , , , --
+
+**Result for model 4 estimating imputed dataset 10 & 30**
+
+In Model 4, the situation becomes even more interesting with the
+interaction effect moAttain_Lvl:zthetaB_G. While the No.1 test fit
+reported a credible positive effect in the main article, the effect in
+No.10 is a non- credible negative, and in No.30, it is a non-credible
+positive. This highlights the high degree of uncertainty and instability
+for this parameter across different plausible datasets., , , , , , , , , , , , , , , , , , , , , , , --
+  ## Family: gaussian\
+  ## Links: mu = identity; sigma = identity\
+  ## Formula: ztheta_P ~ zthetaB_G \* mo(Attain_Lvl) + zthetaB_A +
+  zthetaB_B + zthetaB_C + District + Gender + YearG + zlog_hp +
+  z_resource + zlog_hp:YearG\
+  ## Data: final_imputed_datasets[[10]] (Number of observations:
+  155)\
+  ## Draws: 4 chains, each with iter = 1000; warmup = 500; thin = 1;\
+  ## total post-warmup draws = 2000\
+  ##\
+  ## Multilevel Hyperparameters:\
+  ## ~Sch_ID (Number of levels: 36)\
+  ## Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS\
+  ## sd(Intercept) 0.24 0.15 0.01 0.55 1.01 487 896\
+  ##\
+  ## Regression Coefficients:\
+  ## Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS\
+  ## Intercept 0.13 0.28 -0.42 0.69 1.00 1666 1364\
+  ## zthetaB_G 0.40 0.25 -0.01 0.97 1.00 1352 1096\
+  ## zthetaB_A 0.05 0.08 -0.12 0.23 1.00 3336 1449\
+  ## zthetaB_B 0.04 0.08 -0.12 0.21 1.00 3101 1812\
+  ## zthetaB_C 0.10 0.09 -0.07 0.27 1.00 3364 1381\
+  ## District2 -0.28 0.24 -0.74 0.18 1.00 2555 1648\
+  ## District3 -0.04 0.23 -0.49 0.41 1.00 2141 1491\
+  ## Gender2 -0.14 0.17 -0.47 0.19 1.00 4133 1623\
+  ## YearG2 -0.13 0.18 -0.48 0.22 1.00 2708 1448\
+  ## YearG3 -0.02 0.20 -0.42 0.36 1.00 3249 1610\
+  ## zlog_hp 0.52 0.16 0.23 0.84 1.00 1845 1512\
+  ## z_resource -0.11 0.14 -0.39 0.14 1.00 2538 1830\
+  ## YearG2:zlog_hp -0.83 0.21 -1.24 -0.42 1.00 1975 1409\
+  ## YearG3:zlog_hp -0.48 0.24 -0.97 -0.01 1.00 2100 1608\
+  ## moAttain_Lvl 0.04 0.10 -0.18 0.24 1.00 1591 1068\
+  ## moAttain_Lvl:zthetaB_G -0.13 0.10 -0.36 0.05 1.00 1579 1282\
+  ##\
+  ## Monotonic Simplex Parameters:\
+  ## Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS\
+  ## moAttain_Lvl1[1] 0.27 0.20 0.01 0.73 1.00 2704 1414\
+  ## moAttain_Lvl1[2] 0.22 0.18 0.01 0.66 1.00 2659 1471\
+  ## moAttain_Lvl1[3] 0.25 0.19 0.01 0.69 1.00 2122 1460\
+  ## moAttain_Lvl1[4] 0.26 0.19 0.01 0.72 1.00 2655 1273\
+  ## moAttain_Lvl:zthetaB_G1[1] 0.29 0.20 0.01 0.75 1.00 2354 1107\
+  ## moAttain_Lvl:zthetaB_G1[2] 0.27 0.19 0.01 0.71 1.00 2461 1407\
+  ## moAttain_Lvl:zthetaB_G1[3] 0.18 0.16 0.00 0.59 1.00 2750 1435\
+  ## moAttain_Lvl:zthetaB_G1[4] 0.27 0.19 0.01 0.72 1.01 2464 1249\
+  ##\
+  ## Further Distributional Parameters:\
+  ## Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS\
+  ## sigma 0.95 0.06 0.83 1.09 1.00 1649 1357\
+  ##\
+  ## Draws were sampled using sampling(NUTS). For each parameter,
+  Bulk_ESS\
+  ## and Tail_ESS are effective sample size measures, and Rhat is the
+  potential\
+  ## scale reduction factor on split chains (at convergence, Rhat = 1)., , , , , , , , , , , , , , , , , , , , , , , --, , , , , , , , , , , , , , , , , , , , , , , --, , , , , , , , , , , , , , , , , , , , , , , --
+  ## Family: gaussian\
+  ## Links: mu = identity; sigma = identity\
+  ## Formula: ztheta_P ~ zthetaB_G \* mo(Attain_Lvl) + zthetaB_A +
+  zthetaB_B + zthetaB_C + District + Gender + YearG + zlog_hp +
+  z_resource + zlog_hp:YearG\
+  ## Data: final_imputed_datasets[[30]] (Number of observations:
+  155)\
+  ## Draws: 4 chains, each with iter = 1000; warmup = 500; thin = 1;\
+  ## total post-warmup draws = 2000\
+  ##\
+  ## Multilevel Hyperparameters:\
+  ## ~Sch_ID (Number of levels: 36)\
+  ## Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS\
+  ## sd(Intercept) 0.15 0.11 0.00 0.42 1.01 640 676\
+  ##\
+  ## Regression Coefficients:\
+  ## Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS\
+  ## Intercept 0.17 0.28 -0.39 0.76 1.00 1104 990\
+  ## zthetaB_G -0.01 0.23 -0.53 0.41 1.00 945 1095\
+  ## zthetaB_A 0.02 0.08 -0.13 0.18 1.00 2697 1499\
+  ## zthetaB_B 0.03 0.08 -0.12 0.18 1.00 2660 1411\
+  ## zthetaB_C 0.14 0.08 -0.01 0.29 1.00 2558 1522\
+  ## District2 -0.29 0.21 -0.70 0.11 1.00 1988 1319\
+  ## District3 -0.21 0.21 -0.61 0.20 1.00 1419 1388\
+  ## Gender2 0.03 0.16 -0.28 0.35 1.00 2824 1445\
+  ## YearG2 -0.24 0.18 -0.59 0.10 1.00 1622 1435\
+  ## YearG3 -0.12 0.21 -0.53 0.28 1.00 2069 1342\
+  ## zlog_hp 0.48 0.14 0.20 0.76 1.00 1755 1647\
+  ## z_resource -0.05 0.12 -0.29 0.20 1.00 1950 1380\
+  ## YearG2:zlog_hp -0.83 0.19 -1.21 -0.47 1.00 1468 1601\
+  ## YearG3:zlog_hp -0.44 0.22 -0.86 0.00 1.00 1676 1633\
+  ## moAttain_Lvl 0.03 0.10 -0.19 0.23 1.01 1006 878\
+  ## moAttain_Lvl:zthetaB_G 0.19 0.18 -0.09 0.57 1.00 905 1254\
+  ##\
+  ## Monotonic Simplex Parameters:\
+  ## Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS\
+  ## moAttain_Lvl1[1] 0.28 0.21 0.01 0.73 1.00 2187 1237\
+  ## moAttain_Lvl1[2] 0.21 0.18 0.01 0.66 1.00 1903 1089\
+  ## moAttain_Lvl1[3] 0.23 0.18 0.01 0.67 1.00 2063 1685\
+  ## moAttain_Lvl1[4] 0.27 0.20 0.01 0.74 1.00 2584 1381\
+  ## moAttain_Lvl:zthetaB_G1[1] 0.22 0.18 0.01 0.66 1.00 1589 996\
+  ## moAttain_Lvl:zthetaB_G1[2] 0.14 0.14 0.00 0.53 1.00 1707 1342\
+  ## moAttain_Lvl:zthetaB_G1[3] 0.14 0.14 0.00 0.53 1.00 1561 1498\
+  ## moAttain_Lvl:zthetaB_G1[4] 0.50 0.26 0.03 0.89 1.00 1215 1740\
+  ##\
+  ## Further Distributional Parameters:\
+  ## Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS\
+  ## sigma 0.92 0.06 0.81 1.05 1.00 1926 1558\
+  ##\
+  ## Draws were sampled using sampling(NUTS). For each parameter,
+  Bulk_ESS\
+  ## and Tail_ESS are effective sample size measures, and Rhat is the
+  potential\
+  ## scale reduction factor on split chains (at convergence, Rhat = 1)., , , , , , , , , , , , , , , , , , , , , , , --, , , , , , , , , , , , , , , , , , , , , , , --
+
+**Why Should We Report Test Model Results?**
+
+One might ask: why not simply report the joint model results, given the
+high degree of uncertainty in individual test models? In fact, there are
+good reasons to include the test model results in the main text. Most
+importantly, in brms it is not possible to directly compare joint models
+using information criteria such as LOOIC or WAIC, these metrics are
+always computed on the No.1 imputed dataset. As a result, model
+comparisons (and thus model selection) are effectively based on the No.1
+test model. Reporting the test model results therefore provides
+essential context for interpreting model selection and understanding why
+a particular model was preferred. Far from being redundant, these
+results are directly relevant for readers who wish to follow the logic
+behind our model comparisons.
+
+Second, we believe that these "disappearing effects" are worth
+reporting. It is likely that some of these patterns are a consequence of
+limited sample size, and while they do not represent firm statistical
+evidence, they might indicate potential trends or patterns that deserve
+further investigation in future studies. In this sense, reporting test
+model results alongside joint model results provides a fuller and more
+nuanced understanding of the data.
+
+# Appendix C: Descriptive statistics and model-results tables
+
+Results, and Prior Sensitivity Analysis
+
+**Table C.1:**
+
+*Descriptive Statistics for Variables (Practice and Beliefs based on
+First Set of Plausible Values)*
+
++, , , , , , , , , , --+, , , --+, , -+, , , , , -+
+| Variable                       | *M/*      | *SD*  | Missingness    |
+|                                | *prop*    |       |                |
++================================+===========+=======+================+
+| **Teacher Level (n=155)**      |           |       |                |
++, , , , , , , , , , --+, , , --+, , -+, , , , , -+
+| Connectionist Practice         | -0.08     | 1.16  |                |
++, , , , , , , , , , --+, , , --+, , -+, , , , , -+
+| General Belief                 | 0.02      | 1.06  | 4 (2.6%)       |
++, , , , , , , , , , --+, , , --+, , -+, , , , , -+
+| Belief about Mathematics       | 0.05      | 1.93  | 4 (2.6%)       |
++, , , , , , , , , , --+, , , --+, , -+, , , , , -+
+| Belief about Learner           | -0.11     | 1.20  | 4 (2.6%)       |
++, , , , , , , , , , --+, , , --+, , -+, , , , , -+
+| Belief about Pedagogy          | 0.33      | 1.13  | 4 (2.6%)       |
++, , , , , , , , , , --+, , , --+, , -+, , , , , -+
+| Gender                         |           |       | 3 (1.9%)       |
++, , , , , , , , , , --+, , , --+, , -+, , , , , -+
+| ~ Male                        | 0.44      |       |                |
++, , , , , , , , , , --+, , , --+, , -+, , , , , -+
+| ~ Female                      | 0.56      |       |                |
++, , , , , , , , , , --+, , , --+, , -+, , , , , -+
+| Year Group                     |           |       |                |
++, , , , , , , , , , --+, , , --+, , -+, , , , , -+
+| ~ Year 7                      | 0.38      |       |                |
++, , , , , , , , , , --+, , , --+, , -+, , , , , -+
+| ~ Year 8                      | 0.37      |       |                |
++, , , , , , , , , , --+, , , --+, , -+, , , , , -+
+| ~ Year 9                      | 0.25      |       |                |
++, , , , , , , , , , --+, , , --+, , -+, , , , , -+
+| Perceived Attainment           | 0.03      |       | 3 (1.9%)       |
+|                                |           |       |                |
+| ~ Level 1                     | 0.19      |       |                |
+|                                |           |       |                |
+| ~ Level 2                     | 0.43      |       |                |
+|                                |           |       |                |
+| ~ Level 3                     | 0.31      |       |                |
+|                                |           |       |                |
+| ~ Level 4                     | 0.04      |       |                |
+|                                |           |       |                |
+| ~ Level 5                     |           |       |                |
++, , , , , , , , , , --+, , , --+, , -+, , , , , -+
+| **School level (n=36)**        |           |       |                |
++, , , , , , , , , , --+, , , --+, , -+, , , , , -+
+| District                       |           |       | 2 (1.3%)       |
++, , , , , , , , , , --+, , , --+, , -+, , , , , -+
+| ~ District 1                  | 0.42      |       |                |
++, , , , , , , , , , --+, , , --+, , -+, , , , , -+
+| ~ District 2                  | 0.24      |       |                |
++, , , , , , , , , , --+, , , --+, , -+, , , , , -+
+| ~ District 3                  | 0.34      |       |                |
++, , , , , , , , , , --+, , , --+, , -+, , , , , -+
+| Resource                       | 0.00      | 0.75  |                |
++, , , , , , , , , , --+, , , --+, , -+, , , , , -+
+| Housing Price                  | 9.44      | 0.42  |                |
++, , , , , , , , , , --+, , , --+, , -+, , , , , -+
+
+: Table C.4.
+
+Note: The reported data for Connectionist Practice and belief dimensions
+(General Belief, Belief about Mathematics, Belief about Learner, and
+Belief about Pedagogy) are based on the first of eight sets of plausible
+values. Means (*M*) and standard deviations (*SD*) are reported for
+continuous variables. Dummy-coded categorical variables (Gender, Year
+Group, District) report the proportions (*prop*), with values ranging
+from 0 to 1. Housing Price represents log-transformed values.
+Missingness is presented as count (percentage) and is only reported for
+variables with missing data. The sample includes one virtual school
+assigned to teachers who did not report their actual school; for this
+case, school-level variables were imputed using the mean values from the
+other schools.
+
+**Table C.2.**
+
+*Bayesian Multilevel Models Predicting Teacher Connectionist Practices*
+
+***Table C.2a.** Models with General and Specific Belief Dimensions
+(Contains Models 1 and 2)*, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , Model 1:                                      Model 2:                            
+                 General                                       Belief with                         
+                 belief                                        specific                            
+                 only                                          dimensions, , , , --, , , -, , , --, , , -, , , --, , , , , , , --, , , -, , , --
+                 Test                   Joint                  Test                     Joint      
+
+                 Estimate   95% CrI     Estimate   95% CrI     Estimate     95% CrI     Estimate   95% CrI
+
+  **Teacher                                                                                        
+  level (L1)**                                                                                     
+
+  General Belief **0.23**   **[0.06,   **0.21**   **[0.02,   **0.21**     **[0.04,   **0.21**   **[0.02,
+                            0.39]**               0.39]**                 0.37]**               0.39]**
+
+  Belief about                                                 0.13         [-0.03,    0.04       [-0.15,
+  Mathematics                                                               0.29]                 0.23]
+
+  Belief about                                                 0.03         [-0.13,    0.05       [-0.16,
+  Learner                                                                   0.19]                 0.24]
+
+  Belief about                                                 **0.21**     **[0.05,   0.11       [-0.10,
+  Pedagogy                                                                  0.35]**               0.31]
+
+  Gender         -0.02      [-0.34,    -0.02      [-0.36,    -0.01        [-0.34,    -0.04      [-0.38,
+                            0.29]                 0.31]                   0.31]                 0.31]
+
+  Year Group 8   -0.20      [-0.56,    -0.12      [-0.52,    -0.25        [-0.62,    -0.13      [-0.53,
+                            0.19]                 0.27]                   0.12]                 0.28]
+
+  Year Group 9   -0.05      [-0.45,    -0.08      [-0.50,    -0.07        [-0.50,    -0.08      [-0.51,
+                            0.37]                 0.35]                   0.36]                 0.35]
+
+  Perceived      0.07       [-0.17,    0.06       [-0.16,    0.04         [-0.17,    0.07       [-0.16,
+  Attainment                0.26]                 0.27]                   0.24]                 0.27]
+
+  **School level                                                                                   
+  (L2)**                                                                                           
+
+  Resource       -0.08      [-0.34,    -0.05      [-0.32,    -0.06        [-0.33,    -0.05      [-0.33,
+                            0.18]                 0.22]                   0.19]                 0.22]
+
+  Housing Price  0.10       [-0.10,    0.09       [-0.13,    0.07         [-0.14,    0.08       [-0.14,
+                            0.31]                 0.30]                   0.28]                 0.30]
+
+  District 2     -0.25      [-0.68,    -0.24      [-0.70,    -0.24        [-0.67,    -0.24      [-0.69,
+                            0.20]                 0.23]                   0.21]                 0.23]
+
+  District 3     -0.07      [-0.52,    -0.16      [-0.64,    0.00         [-0.44,    -0.14      [-0.63,
+                            0.41]                 0.33]                   0.46]                 0.35]
+
+  **Random                                                                                         
+  effect (SD)**                                                                                    
+
+  School         0.14       [0.01,     0.14       [0.01,     0.15         [0.01,     0.14       [0.01,
+  Intercept                 0.43]                 0.39]                   0.42]                 0.40]
+
+  **Model fit                                                                                      
+  (test                                                                                            
+  models)**                                                                                        
+
+  Bayes R^2^     0.14       [0.07,                            0.20         [0.11,                
+                            0.23]                                          0.30]                 
+
+  LOOIC          451.1      [412.1,                           447.9        [410.3,               
+                            490.1]                                         485.5], , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , : *Prior sensitivity analysis for Model 3*
+
+***Table C.2b.** Models with Interaction Effects (Contains Models 3 and
+4)*, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , -
+                      Model 3:                                          Model 4: Full                          
+                      Year group                                        interaction                            
+                      $\times$                                                                                 
+                      housing                                                                                  
+                      price, , , , , , -, , , --, , , , , , , --, , , , , , , , -, , , , , , , --, , , , Test                     Joint                    Test                       Joint       
+
+                      Estimate    95% CrI      Estimate    95% CrI      Estimate      95% CrI      Estimate    95% CrI
+
+  **Teacher Level                                                                                              
+  (L1)**                                                                                                       
+
+  General Belief      **0.18**    **[0.03,    **0.21**    **[0.04,    -0.27         [-1.03,     0.00        [-0.78,
+                                  0.33]**                 0.39]**                   0.15]                   0.60]
+
+  Belief about        0.12        [-0.03,     0.05        [-0.14,     0.12          [-0.03,     0.05        [-0.15,
+  Mathematics                     0.28]                   0.23]                     0.26]                   0.23]
+
+  Belief about        0.03        [-0.11,     0.03        [-0.15,     0.04          [-0.11,     0.04        [-0.14,
+  Learner                         0.18]                   0.22]                     0.19]                   0.22]
+
+  Belief about        **0.19**    **[0.03,    0.11        [-0.08,     **0.18**      **[0.02,    0.10        [-0.08,
+  Pedagogy                        0.34]**                 0.29]                     0.33]**                 0.29]
+
+  Gender              -0.02       [-0.32,     -0.05       [-0.37,     -0.01         [-0.31,     -0.04       [-0.37,
+                                  0.27]                   0.27]                     0.30]                   0.29]
+
+  Year Group 8        -0.26       [-0.58,     -0.15       [-0.53,     -0.21         [-0.55,     -0.13       [-0.51,
+                                  0.10]                   0.23]                     0.12]                   0.25]
+
+  Year Group 9        -0.03       [-0.43,     -0.06       [-0.46,     -0.06         [-0.45,     -0.06       [-0.46,
+                                  0.34]                   0.35]                     0.33]                   0.34]
+
+  Perceived           0.04        [-0.19,     0.05        [-0.17,     0.06          [-0.14,     0.07        [-0.15,
+  Attainment                      0.22]                   0.24]                     0.24]                   0.27]
+
+  **School Level                                                                                               
+  (L2)**                                                                                                       
+
+  Resource            -0.08       [-0.34,     -0.05       [-0.33,     -0.05         [-0.31,     -0.06       [-0.33,
+                                  0.18]                   0.22]                     0.20]                   0.21]
+
+  Housing Price       **0.50**    **[0.21,    **0.53**    **[0.22,    **0.47**      **[0.19,    **0.53**    **[0.22,
+                                  0.80]**                 0.85]**                   0.74]**                 0.85]**
+
+  District 2          -0.29       [-0.73,     -0.30       [-0.75,     -0.25         [-0.67,     -0.28       [-0.73,
+                                  0.13]                   0.16]                     0.21]                   0.18]
+
+  District 3          -0.07       [-0.52,     -0.20       [-0.68,     -0.09         [-0.51,     -0.20       [-0.68,
+                                  0.41]                   0.29]                     0.36]                   0.29]
+
+  **Interaction**                                                                                              
+
+  Year group 8 $:$    **-0.84**   **[-1.21,   **-0.89**   **[-1.29,   **-0.75**     **[-1.14,   **-0.87**   **[-1.28,
+  Housing Price                   -0.46]**                -0.49]**                  -0.40]**                -0.47]**
+
+  Year group 9 $:$    **-0.51**   **[-0.93,   **-0.55**   **[-1.02,   **-0.46**     **[-0.85,   **-0.55**   **[-1.01,
+  Housing Price                   -0.08]**                -0.09]**                  -0.06]**                -0.08]**
+
+  General Belief $:$                                                    **0.28**      **[0.06,    0.12        [-0.20,
+  Perceived                                                                           0.55]**                 0.47]
+  Attainment                                                                                                   
+
+  **Random effect                                                                                              
+  (*SD*)**                                                                                                     
+
+  School Intercept    0.20        [0.01,      0.18        [0.01,      0.21          [0.01,      0.19        [0.01,
+                                  0.49]                   0.47]                     0.50]                   0.48]
+
+  **Model fit (test                                                                                            
+  models)**                                                                                                    
+
+  Bayes R^2^          0.30        [0.19,                               0.34          [0.23,                  
+                                  0.40]                                              0.43]                   
+
+  LOOIC               431.0       [392.0,                              425.7         [387.7,                 
+                                  470.0]                                             463.7], , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , -
+
+Note: 95% CrI refers to Bayesian Credible Intervals, except for LOOIC,
+which reports frequentist 95% confidence intervals. **Bold** estimates
+indicate credible effects, defined as 95% CrI excluding zero. Reference
+categories for categorical predictors are male (Gender), Year Group 7and
+District 1. All continuous variables were standardized thus each
+coefficient can be interpreted as the expected change associated with a
+one-SD increase in the predictor. Perceived attainment was modelled as a
+monotonic effect, with estimates reflecting the expected average step
+size for transitions between adjacent levels (i.e., as there are five
+levels, the overall effect from level 1 to 5 is the reported estimate
+multiplied by 4). Test models are based on the first of 40 datasets,
+whereas Joint models aggregate posterior distributions across all 40
+datasets. LOOIC (Leave-One-Out Information Criterion) assesses
+predictive accuracy, with lower values indicating better fit. All models
+showed good convergence (R̂ < 1.05) and acceptable model diagnostics,
+with all Pareto k values below 0.7 (also check [authors' github] for
+detailed output).
+
+**Table C.3.**
+
+*Marginal Effects of Housing Price by Year Group*, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , --
+                    Model 3:                                          Model 4: Full                          
+                    Year group                                        interaction                            
+                    $\times$                                                                                 
+                    housing                                                                                  
+                    price, , , , , --, , , --, , , , , , , --, , , , , , , , -, , , , , , , --, , , , Test                     Joint                    Test                       Joint       
+
+                    Estimate    95% CrI      Estimate    95% CrI      Estimate      95% CrI      Estimate    95% CrI
+
+  Year group 7      **0.50**    **[0.21,    **0.53**    **[0.22,    **0.47**      **[0.19,    **0.53**    **[0.22,
+  $\times$ Housing              0.80]**                 0.85]**                   0.74]**                 0.85]**
+  price                                                                                                      
+
+  Year group 8      **-0.33**   **[-0.62,   **-0.36**   **[-0.66,   **-0.29**     **[-0.58,   **-0.34**   **[-0.65,
+  $\times$ Housing              -0.03]**                -0.05]**                  0.00]**                 -0.03]**
+  price                                                                                                      
+
+  Year group 9      0.00        [-0.37,     0.02        [-0.41,     0.00          [-0.35,     -0.01       [-0.4,
+  $\times$ Housing              0.35]                   0.36]                     0.33]                   0.37]
+  price, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , --
+
+Note: Each cell reports the marginal slope of log-housing-price (HP) at
+the indicated year group, calculated as
+$\beta_{\text{HP}} + \beta_{\text{Year}\text{G}_{\text{k}}:\text{HP}}$,
+which represents the main effect of housing price plus its interaction
+with Year $k$ (7, 8, 9). **Bold** estimates denote non-zero credible
+effects (95 % CrI does not include 0.), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , Model 3                                           Model 3                              
+                    with narrow                                       with wide                            
+                    prior N                                           prior N                              
+                    (0,1)                                             (0,5), , , , , --, , , --, , , , , , , --, , , , , , , --, , , , , , , --, , , , Test                     Joint                    Test                     Joint       
+
+                    Estimate    95% CI       Estimate    95% CI       Estimate    95% CI       Estimate    95% CI
+
+  **Teacher Level                                                                                          
+  (L1)**                                                                                                   
+
+  General Belief    **0.19**    **[0.04,    **0.21**    **[0.03,    **-0.18**   **[0.04,    **0.21**    **[-0.03,
+                                0.34]**                 0.39]**                 0.33]**                 0.39]**
+
+  Belief about      0.12        [-0.03,     0.05        [-0.14,     0.12        [-0.03,     0.05        [-0.14,
+  Mathematics                   0.27]                   0.23]                   0.27]                   0.23]
+
+  Belief about      0.03        [-0.13,     0.03        [-0.14,     0.03        [-0.12,     0.03        [-0.15,
+  Learner                       0.18]                   0.21]                   0.18]                   0.22]
+
+  Belief about      **0.19**    **[0.04,    0.11        [-0.08,     **0.19**    **[0.04,    0.11        [-0.08,
+  Pedagogy                      0.34]**                 0.29]                   0.34]**                 0.29]
+
+  Gender            -0.03       [-0.33,     -0.04       [-0.36,     -0.02       [-0.31,     -0.05       [-0.37,
+                                0.28]                   0.28]                   0.27]                   0.27]
+
+  Year Group 8      -0.25       [-0.58,     -0.14       [-0.52,     -0.26       [-0.60,     -0.15       [-0.53,
+                                0.07]                   0.23]                   0.08]                   0.23]
+
+  Year Group 9      -0.04       [-0.40,     -0.06       [-0.45,     -0.04       [-0.42,     -0.06       [-0.46,
+                                0.34]                   0.33]                   0.35]                   0.34]
+
+  Perceived         0.04        [-0.16,     0.05        [-0.16,     0.03        [-0.20,     0.05        [-0.18,
+  Attainment                    0.21]                   0.24]                   0.23]                   0.25]
+
+  **School Level                                                                                           
+  (L2)**                                                                                                   
+
+  Resource          -0.05       [-0.31,     -0.05       [-0.32,     -0.04       [-0.31,     -0.05       [-0.32,
+                                0.19]                   0.21]                   0.20]                   0.22]
+
+  Housing Price     **0.47**    **[0.18,    **0.51**    **[0.21,    **0.50**    **[0.23,    **0.54**    **[0.23,
+                                0.77]**                 0.81]**                 0.79]**                 0.85]**
+
+  District 2        -0.29       [-0.71,     -0.28       [-0.72,     -0.29       [-0.72,     -0.30       [-0.75,
+                                0.12]                   0.16]                   0.16]                   0.16]
+
+  District 3        -0.07       [-0.48,     -0.20       [-0.65,     -0.09       [-0.50,     -0.20       [-0.68,
+                                0.34]                   0.28]                   0.40]                   0.29]
+
+  **Interaction**                                                                                          
+
+  Year group 8:     **-0.80**   **[-1.15,   **-0.84**   **[-1.24,   **-0.83**   **[-1.19,   **-0.89**   **[-1.30,
+  Housing Price                 -0.41]**                -0.46]**                -0.47]**                -0.49]**
+
+  Year group 9:     **-0.46**   **[-0.87,   **-0.51**   **[-0.96,   **-0.50**   **[-0.92,   **-0.56**   **[-1.02,
+  Housing Price                 -0.06]**                -0.06]**                -0.06]**                -0.09]**
+
+  **Random effect                                                                                          
+  (*SD*)**                                                                                                 
+
+  School Intercept  0.29        [0.01,      0.18        [0.01,      0.19        [0.01,      0.18        [0.01,
+                                0.45]                   0.46]                   0.47]                   0.47], , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , Note: 95% CI refers to Bayesian Credible Intervals, except for LOOIC,
+which reports frequentist 95% confidence intervals. **Bold** estimates
+indicate credible effects, defined as 95% CI excluding zero. Reference
+categories for categorical predictors are male (Gender), Year Group 7and
+District 1. All continuous variables were standardized thus each
+coefficient can be interpreted as the expected change associated with a
+one-SD increase in the predictor. Perceived attainment was modelled as a
+monotonic effect, with estimates reflecting the expected average step
+size for transitions between adjacent levels (i.e., as there are five
+levels, the overall effect from level 1 to 5 is the reported estimate
+multiplied by 4). Test models are based on the first of 40 datasets,
+whereas Joint models aggregate posterior distributions across all 40
+datasets. **Prior Sensitivity Analysis:** We tested model robustness by
+refitting Model 3 with two alternative priors: N (0,1) and N (0,5). All
+parameter estimates showed minimal change across prior specifications,
+and patterns of non-zero effects (i.e., 95% CI excluding zero) remained
+consistent. The sensitivity analyses confirm that our findings are
+robust to prior choice and primarily data-driven.
