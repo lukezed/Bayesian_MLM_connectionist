@@ -12,3 +12,11 @@ data/
 paper/oldsubmission/
 plan.md
 .DS_Store
+
+# rendered manuscript files (source is paper/maintext.qmd)
+paper/maintext.docx
+paper/maintext.pdf
+paper/maintext.tex
+
+# blinded submission working copy
+paper_blind/

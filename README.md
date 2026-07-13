@@ -13,8 +13,8 @@ Project Structure Overview:
 │   ├── MLM_data.xlsx                 # [IGNORED] Cleaned dataset for analysis
 │   └── school_data_processing.xlsx    # [IGNORED] Raw data/pre-processing records
 ├── figures
-│   ├── Figure_1_PA.pdf               # Visualization of Belief-Practice relations
-│   └── Figure_2_Housing_Price.pdf    # Visualization of Housing Price effects
+│   ├── Fig1.png                      # Visualization of Belief-Practice relations
+│   └── Fig2.png                      # Visualization of Housing Price effects
 └── models
     ├── basic_mlm_multiple.rds        # Model 1 (Joint): Baseline
     ├── dim4_mlm_multiple.rds         # Model 2 (Joint): Structural predictors
