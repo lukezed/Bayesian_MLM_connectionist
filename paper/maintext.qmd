@@ -191,8 +191,8 @@ kbl(sd_tab,
   pack_rows("Teacher level (n = 155)", 1, 18, bold = TRUE) |>
   pack_rows("School level (n = 36, incl. one virtual school)", 19, 24, bold = TRUE) |>
   add_indent(c(7, 8, 10, 11, 12, 14, 15, 16, 17, 18, 20, 21, 22)) |>
-  column_spec(1, width = "5.5cm") |>
-  column_spec(2:4, width = "2.6cm") |>
+  column_spec(1, width = "4.8cm") |>
+  column_spec(2:4, width = "2.05cm") |>
   kable_styling(latex_options = c("hold_position"), font_size = 9,
                 full_width = FALSE, position = "center") |>
   footnote(general_title = "Note.",
