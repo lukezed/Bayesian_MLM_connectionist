@@ -1,0 +1,33 @@
+---
+format:
+  pdf:
+    pdf-engine: xelatex
+    mainfont: "Times New Roman"
+    fontsize: 11pt
+    geometry: margin=1in
+---
+
+Chi Zhang\
+Faculty of Education, East China Normal University\
+3663 North Zhongshan Road, Putuo Campus, Shanghai 200062, China\
+chi.zhang.edu@gmail.com
+
+The Editors\
+*International Journal of Educational Research*
+
+Dear Editors,
+
+We are submitting "Teacher Beliefs, School Context, and Reform-Oriented Teaching: A Bayesian Multilevel Study of Lower-Secondary Mathematics Teachers in China" for consideration in the *International Journal of Educational Research*.
+
+Educational reform commonly invests in changing what teachers believe, on the assumption that changed beliefs will change classroom practice. This study asks how far that assumption holds once the conditions of the school are taken into account. Using questionnaire data from 155 teachers across 35 schools, we compare a teacher-level influence, their equity beliefs, against a school-level structural one, the socioeconomic position of the school, as correlates of reform-oriented teaching. The belief association is modest and stable. The school-level association is larger where it is credible, and it reverses direction across year groups.
+
+The paper suits the journal in three respects. The question is not specific to mathematics, since reforms across subject areas are designed around teacher development, and whether that design is sufficient on its own is a general problem of implementation. The findings speak to reform policy and to school improvement, and the discussion sets out what they imply beyond the Chinese case, for any system in which catchment rules and housing markets sort families across schools. The analysis also carries a methodological contribution: measurement uncertainty from the item response models and missing-data uncertainty from imputation are propagated through to a multilevel comparison of teacher- and school-level influences, an approach available wherever latent constructs, clustered data and incomplete observations occur together.
+
+The manuscript is not under consideration elsewhere, all authors have approved the submission, and the study received ethical approval from the University of Manchester Research Ethics Committee.
+
+We look forward to hearing from you.
+
+Yours sincerely,
+
+Chi Zhang\
+on behalf of the authors
