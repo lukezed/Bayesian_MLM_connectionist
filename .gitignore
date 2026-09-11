@@ -20,3 +20,8 @@ paper/maintext.tex
 
 # blinded submission working copy
 paper_blind/
+
+# submission artefacts
+paper/highlights.pdf
+paper/maintextIJER-MP.docx
+paper/maintextSeptMP.docx

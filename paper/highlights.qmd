@@ -1,0 +1,16 @@
+---
+format:
+  pdf:
+    pdf-engine: xelatex
+    mainfont: "Times New Roman"
+    fontsize: 11pt
+    geometry: margin=1in
+---
+
+## Highlights
+
+- General equity beliefs are associated with more reform-oriented teaching practice.
+- The three object-specific belief dimensions show no credible association.
+- School socioeconomic position is the stronger correlate of reported practice.
+- The school-level association reverses by grade: positive Year 7, negative Year 8.
+- Measurement and imputation uncertainty are carried into the multilevel model.
