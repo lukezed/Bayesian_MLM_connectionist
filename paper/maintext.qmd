@@ -56,7 +56,7 @@ format:
     number-sections: true
 
 header-includes:
-  - \usepackage{soul}
+  - \newcommand{\hl}[1]{#1}
   - \makeatletter
   - \@ifundefined{cslhangindent}{\newlength{\cslhangindent}}{}
   - \makeatother
