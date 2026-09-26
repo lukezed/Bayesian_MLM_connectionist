@@ -13,17 +13,17 @@ Faculty of Education, East China Normal University\
 chi.zhang.edu@gmail.com
 
 The Editors\
-*International Journal of Educational Research*
+*Social Psychology of Education*
 
 Dear Editors,
 
-We are submitting "Teacher Beliefs, School Context, and Reform-Oriented Teaching: A Bayesian Multilevel Study of Lower-Secondary Mathematics Teachers in China" for consideration in the *International Journal of Educational Research*.
+We are submitting "Teacher Beliefs, School Context, and Reform-Oriented Teaching: A Bayesian Multilevel Study of Lower-Secondary Mathematics Teachers in China" for consideration in *Social Psychology of Education*.
 
-Educational reform commonly invests in changing what teachers believe, on the assumption that changed beliefs will change classroom practice. This study asks how far that assumption holds once the conditions of the school are taken into account. Using questionnaire data from 155 teachers across 35 schools, we compare a teacher-level influence, their equity beliefs, against a school-level structural one, the socioeconomic position of the school, as correlates of reform-oriented teaching. The belief association is modest and stable. The school-level association is larger where it is credible, and it reverses direction across year groups.
+The paper takes up a question on the boundary between psychology and sociology. Educational reform commonly assumes that changing what teachers believe will change what they do in the classroom, while sociological accounts hold that the socioeconomic position of a school shapes teaching at least as much as individual conviction. Using original questionnaire data from 155 teachers across 35 schools, we relate teachers' equity beliefs and their school's socioeconomic position to reform-oriented (connectionist) practice in Bayesian multilevel models, and compare how much weight each carries. The belief association is modest and stable. The school-level association is larger where it is credible, and it reverses direction across year groups.
 
-The paper suits the journal in three respects. The question is not specific to mathematics, since reforms across subject areas are designed around teacher development, and whether that design is sufficient on its own is a general problem of implementation. The findings speak to reform policy and to school improvement, and the discussion sets out what they imply beyond the Chinese case, for any system in which catchment rules and housing markets sort families across schools. The analysis also carries a methodological contribution: measurement uncertainty from the item response models and missing-data uncertainty from imputation are propagated through to a multilevel comparison of teacher- and school-level influences, an approach available wherever latent constructs, clustered data and incomplete observations occur together.
+We think the paper suits the journal because its argument draws on both sides of that boundary: belief system theory and the attitude–behaviour literature on one side, Bourdieu's account of cultural capital and social reproduction on the other. The paper engages directly with recent work in the journal, including Flint et al. (2025), who modelled teachers' beliefs and school socioeconomic context together, and Wu (2026), on teacher beliefs and institutional markers of disadvantage in China. The analysis also carries measurement uncertainty from the item response models and missing-data uncertainty from imputation through to the substantive comparison.
 
-The manuscript is not under consideration elsewhere, all authors have approved the submission, and the study received ethical approval from the University of Manchester Research Ethics Committee.
+The manuscript reports original data collected by the authors, is not under consideration elsewhere, and has been approved by both authors. The study received ethical approval from the University of Manchester Research Ethics Committee.
 
 We look forward to hearing from you.
 

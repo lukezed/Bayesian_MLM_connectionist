@@ -35,8 +35,7 @@ affiliations:
     name: The University of Manchester
     department: Department of Social Statistics
 
-abstract: |
-  Educational reform often assumes that changing teachers' beliefs will change their classroom practice. Drawing on belief system theory and Bourdieu's theory of social reproduction, this study asks whether mathematics teachers' connectionist practice, the reform-oriented teaching that builds on students' own mathematical understandings, is more belief-driven or school-determined. Using questionnaire data from 155 mathematics teachers across 35 lower-secondary schools in Wenzhou, China, we fitted Bayesian multilevel models relating teachers' equity beliefs (a general equity orientation and three specific dimensions, about mathematics, learners, and pedagogy) and their school's socioeconomic position, indexed by neighbourhood housing price, to self-reported connectionist practice, propagating measurement and imputation uncertainty throughout. The results were asymmetric. Teachers with stronger general equity beliefs reported modestly more connectionist practice, whereas the specific belief dimensions showed no credible association. The school's socioeconomic position was associated with practice more strongly, and not in the same direction across grades: the association was positive in Year 7, negative in Year 8, and non-credible in Year 9. Where credible, the association with the school's socioeconomic position exceeded the association with general equity belief. Both teachers' beliefs and their school's socioeconomic position were associated with practice, with the school's position the stronger of the two and shifting with the grade taught. The findings suggest that reform implementation depends not only on teachers' beliefs but also on the structural conditions in which teaching occurs. Methodologically, the study shows how Bayesian multilevel modelling can integrate measurement, missing-data, and hierarchical uncertainty when estimating teacher- and school-level influences.
+abstract: "Educational reform often assumes that changing teachers' beliefs will change their classroom practice. Drawing on belief system theory and Bourdieu's theory of social reproduction, this study asks whether mathematics teachers' connectionist practice, the reform-oriented teaching that builds on students' own mathematical understandings, is more belief-driven or school-determined. Using questionnaire data from 155 mathematics teachers across 35 lower-secondary schools in Wenzhou, China, we fitted Bayesian multilevel models relating teachers' equity beliefs (a general equity orientation and three specific dimensions, about mathematics, learners, and pedagogy) and their school's socioeconomic position, indexed by neighbourhood housing price, to self-reported connectionist practice, propagating measurement and imputation uncertainty throughout. The results were asymmetric. Teachers with stronger general equity beliefs reported modestly more connectionist practice, whereas the specific belief dimensions showed no credible association. The school's socioeconomic position was associated with practice more strongly, and not in the same direction across grades: the association was positive in Year 7, negative in Year 8, and non-credible in Year 9. Where credible, the association with the school's socioeconomic position exceeded the association with general equity belief. Both teachers' beliefs and their school's socioeconomic position were associated with practice, with the school's position the stronger of the two and shifting with the grade taught. The findings suggest that reform implementation depends not only on teachers' beliefs but also on the structural conditions in which teaching occurs. Methodologically, the study shows how Bayesian multilevel modelling can integrate measurement, missing-data, and hierarchical uncertainty when estimating teacher- and school-level influences."
 
 keywords: [Bayesian multilevel modelling; connectionist practice; social reproduction; socioeconomic status; teacher beliefs]
 
@@ -64,11 +63,41 @@ header-includes:
   - \AtBeginDocument{\setlength{\abovetopsep}{8pt}}
 ---
 
-::: {.content-visible when-format="docx"}
+```{r}
+#| include: false
+# Word output cannot take the LaTeX tables that kableExtra writes for the PDF,
+# so each table also has a plain markdown branch built by word_tbl().
+latex2md <- function(x) {
+  x <- gsub("\\\\shortstack\\{", "", x, perl = TRUE)
+  x <- gsub("\\\\\\\\", " ", x, perl = TRUE)
+  x <- gsub("\\\\textbf\\{([^}]*)\\}", "**\\1**", x, perl = TRUE)
+  x <- gsub("\\$\\\\times\\$", "&times;", x, perl = TRUE)
+  x <- gsub("\\$\\\\mathcal\\{N\\}\\(([^)]*)\\)\\$", "N(\\1)", x, perl = TRUE)
+  x <- gsub("\\$([A-Za-z]+)\\$", "*\\1*", x, perl = TRUE)
+  x <- gsub("\\\\%", "%", x, perl = TRUE)
+  gsub("\\}$", "", x, perl = TRUE)
+}
+md_escape <- function(x) gsub("([*_])", "\\\\\\1", x, perl = TRUE)
+word_tbl <- function(df, cols, groups = NULL, indent = NULL, note = NULL, escape = FALSE) {
+  f <- if (escape) md_escape else latex2md
+  df[] <- lapply(df, f)
+  if (length(indent)) df[indent, 1] <- paste0("&nbsp;&nbsp;&nbsp;", df[indent, 1])
+  if (length(groups)) {
+    starts <- vapply(groups, `[`, numeric(1), 1)
+    out <- list()
+    for (i in seq_len(nrow(df))) {
+      for (g in names(groups)[starts == i]) out[[length(out) + 1]] <- c(paste0("**", g, "**"), rep("", ncol(df) - 1))
+      out[[length(out) + 1]] <- unlist(df[i, ], use.names = FALSE)
+    }
+    df <- as.data.frame(do.call(rbind, out), stringsAsFactors = FALSE)
+  }
+  names(df) <- latex2md(cols)
+  cat(knitr::kable(df, format = "pipe"), sep = "\n")
+  if (!is.null(note)) cat("\n\n*Note.* ", f(note), "\n", sep = "")
+  invisible(NULL)
+}
+```
 
-**Abstract.** Educational reform often assumes that changing teachers' beliefs will change their classroom practice. Drawing on belief system theory and Bourdieu's theory of social reproduction, this study asks whether mathematics teachers' connectionist practice, the reform-oriented teaching that builds on students' own mathematical understandings, is more belief-driven or school-determined. Using questionnaire data from 155 mathematics teachers across 35 lower-secondary schools in Wenzhou, China, we fitted Bayesian multilevel models relating teachers' equity beliefs (a general equity orientation and three specific dimensions, about mathematics, learners, and pedagogy) and their school's socioeconomic position, indexed by neighbourhood housing price, to self-reported connectionist practice, propagating measurement and imputation uncertainty throughout. The results were asymmetric. Teachers with stronger general equity beliefs reported modestly more connectionist practice, whereas the specific belief dimensions showed no credible association. The school's socioeconomic position was associated with practice more strongly, and not in the same direction across grades: the association was positive in Year 7, negative in Year 8, and non-credible in Year 9. Where credible, the association with the school's socioeconomic position exceeded the association with general equity belief. Both teachers' beliefs and their school's socioeconomic position were associated with practice, with the school's position the stronger of the two and shifting with the grade taught. The findings suggest that reform implementation depends not only on teachers' beliefs but also on the structural conditions in which teaching occurs. Methodologically, the study shows how Bayesian multilevel modelling can integrate measurement, missing-data, and hierarchical uncertainty when estimating teacher- and school-level influences.
-
-:::
 
 # Introduction
 
@@ -76,7 +105,7 @@ For global mathematics education reform agendas, there is a broad consensus amon
 
 Despite widespread support for reform-oriented teaching, there remains considerable debate over what actually shapes teachers' classroom practice. Two competing explanatory frameworks dominate the literature. The first concerns teacher agency, positioning teachers' beliefs as the primary determinants of instructional decisions [@goldin2009belief; @goldin2002affect; @pajares1992teache; @thompson2006teache], in line with the intuitive notion that teachers practise what they believe. This perspective has inspired widespread professional development initiatives and interventions aimed at transforming classroom practice by cultivating teachers' related beliefs [e.g., @hunter2020shifti; @wright2021transfa].
 
-However, beliefs do not map straightforwardly onto practice: belief researchers have long held that beliefs are variable and context-dependent, and that their translation into action is mediated by the settings in which teachers work [@skott2014promis; @francis2014indivi]. [In social psychology, attitudes are likewise known to predict behaviour less well when people have little control over acting on them]{.mark} [@ajzen1991theory]. A second perspective takes the settings in which teachers work as its starting point. Drawing on Bourdieu's theory of social reproduction [@bourdieu1990reproda], it holds that the socioeconomic conditions of schooling can rival, or even outweigh, teachers' personal convictions in shaping practice. Capital, in this account, circulates in economic, cultural, and social forms that are mutually convertible [@bourdieu2018forms], and schooling is one of the mechanisms through which these advantages are transmitted and maintained, with teachers' instructional practice at times constrained by, and serving as a channel for, their reproduction. Schools serving communities with different socioeconomic profiles often operate under different institutional priorities and accountability pressures, and teachers often find themselves working within resource-limited contexts they have only partial latitude to shape [@nast2022bringi]. These constraints may help explain why many well-intentioned mathematics education reform initiatives struggle during local implementation, as teachers' reform-oriented intentions meet specific institutional pressures [@leonard2014learni; @westaway2019explor]. Throughout this paper, we use structural factors to refer to such school-level conditions, the socioeconomic position, resources, and institutional circumstances of a school, that lie largely beyond an individual teacher's control.
+However, beliefs do not map straightforwardly onto practice: belief researchers have long held that beliefs are variable and context-dependent, and that their translation into action is mediated by the settings in which teachers work [@skott2014promis; @francis2014indivi]. In social psychology, attitudes are likewise known to predict behaviour less well when people have little control over acting on them [@ajzen1991theory]. A second perspective takes the settings in which teachers work as its starting point. Drawing on Bourdieu's theory of social reproduction [@bourdieu1990reproda], it holds that the socioeconomic conditions of schooling can rival, or even outweigh, teachers' personal convictions in shaping practice. Capital, in this account, circulates in economic, cultural, and social forms that are mutually convertible [@bourdieu2018forms], and schooling is one of the mechanisms through which these advantages are transmitted and maintained, with teachers' instructional practice at times constrained by, and serving as a channel for, their reproduction. Schools serving communities with different socioeconomic profiles often operate under different institutional priorities and accountability pressures, and teachers often find themselves working within resource-limited contexts they have only partial latitude to shape [@nast2022bringi]. These constraints may help explain why many well-intentioned mathematics education reform initiatives struggle during local implementation, as teachers' reform-oriented intentions meet specific institutional pressures [@leonard2014learni; @westaway2019explor]. Throughout this paper, we use structural factors to refer to such school-level conditions, the socioeconomic position, resources, and institutional circumstances of a school, that lie largely beyond an individual teacher's control.
 
 Which of the two carries more weight is a question for educational research generally. Reforms across subject areas commonly invest in professional development aimed at changing what teachers believe about teaching and learning. If the structural characteristics of schools bear on classroom practice as strongly as, or more strongly than, teacher beliefs, reform designed around teacher development alone will produce results that vary with the circumstances of individual schools. Separating teacher-level from school-level influences is therefore important for understanding how reforms are implemented, and why the same initiative takes hold in some schools and not others.
 
@@ -102,7 +131,7 @@ A growing body of empirical research has also associated connectionist practices
 
 ## Teachers' Beliefs about equity as decision-making mechanism
 
-Teacher beliefs are widely regarded as one of the most important predictors of classroom practice [@goldin2009belief; @goldin2002affect]. [Teachers' beliefs form a multidimensional, socially constructed system, and recent evidence indicates that such systems are reinforced where teachers across a school share them]{.mark} [@santos2026teache]. Yet, a universally accepted definition of teacher beliefs remains elusive; in this study, we adopt a commonly used and deliberately loose definition proposed by @fives2012spring: beliefs are "subjective claims that the individual accepts or wants to be true." @goldin2009belief further underscore the ontological premise that every belief must be "attached to objects of belief" (p. 3). This perspective resonates with Thompson's [-@thompson2006teache] argument concerning belief mechanisms, which suggests that, when teachers' beliefs about specific objects are appropriately identified and measured, a coherent relationship between beliefs and instructional practices should be observable. Among the many objects of teacher belief, equity is especially pertinent to connectionist practice, since connectionist teaching is itself an equity-oriented practice: connecting instruction to the diverse understandings students bring is one way of enacting a commitment to their full mathematical participation [@felton-koestler2019childr; @wright2022progre]. This alignment motivates our focus on equity beliefs as the belief construct most likely to bear on connectionist practice.
+Teacher beliefs are widely regarded as one of the most important predictors of classroom practice [@goldin2009belief; @goldin2002affect]. Teachers' beliefs form a multidimensional, socially constructed system, and recent evidence indicates that such systems are reinforced where teachers across a school share them [@santos2026teache]. Yet, a universally accepted definition of teacher beliefs remains elusive; in this study, we adopt a commonly used and deliberately loose definition proposed by @fives2012spring: beliefs are "subjective claims that the individual accepts or wants to be true." @goldin2009belief further underscore the ontological premise that every belief must be "attached to objects of belief" (p. 3). This perspective resonates with Thompson's [-@thompson2006teache] argument concerning belief mechanisms, which suggests that, when teachers' beliefs about specific objects are appropriately identified and measured, a coherent relationship between beliefs and instructional practices should be observable. Among the many objects of teacher belief, equity is especially pertinent to connectionist practice, since connectionist teaching is itself an equity-oriented practice: connecting instruction to the diverse understandings students bring is one way of enacting a commitment to their full mathematical participation [@felton-koestler2019childr; @wright2022progre]. This alignment motivates our focus on equity beliefs as the belief construct most likely to bear on connectionist practice.
 
 Building on the conceptualisation of beliefs as object-specific, in the domain of equity in mathematics education, @felton-koestler2017mathem introduces a "What, Who, and How" (WWH) framework for two levels of belief attached to different objects. At the most general level, teachers hold a General Belief about equity reflecting deeply held convictions about students' entitlement to support and resources necessary to reach their full mathematical potential [@tomlinson2014differa]. This general belief is best understood as a superordinate equity orientation cutting across the three more specific dimensions below rather than a separate fourth dimension, an interpretation supported by the bifactor structure detailed in our companion measurement study [@zhang2026reusaba]. This general belief recognises that students, particularly those who are disadvantaged, require differentiated classroom support that affirms their identities and cultural backgrounds, and ensures that mathematics is experienced as personally and culturally meaningful [@choudry2024power]. Beyond the general level, beliefs can be further differentiated into three contextualised categories:
 
@@ -120,13 +149,13 @@ Whether such beliefs translate into connectionist practice, however, may itself 
 
 Although a large body of research on beliefs suggests that teachers can, through their professional agency, translate their beliefs into classroom practice [@arbaugh2006examin; @cerda2017effect; @pozas2020teache], social reproduction theory [@bourdieu1990reproda] provides a framework for attending to the constraints that broader structural forces impose on teachers' decision-making. From a Bourdieusian perspective, teachers may become unwitting agents of social reproduction enacting pedagogical practices within a persistent dialectical tension between agency and structure [@harker1990introd].
 
-Within schooling systems, students from different socioeconomic status (SES) backgrounds enter the school system with unequal amounts of cultural capital[^1][, the dispositions underpinning it being accumulated through socialisation and carried into daily practice]{.mark} [@tan2022typolo]. Working-class children, by virtue of their relative lack of capital, often experience schooling as alienating. This alienation can manifest as disinterest, disidentification, or withdrawal from participation [@williams2016aliena]. While these responses are shaped by structural positioning within the educational field, they may be internalised as individual deficiencies, leading students to perceive mathematics as "not for us" [@choudry2024power; @williams2016mathem]. [Teachers are not outside the reproduction of disadvantage in schooling. Their beliefs have been shown to moderate how institutional markers of disadvantage bear on students, as when a growth-oriented teacher outlook narrows the gap associated with migrant *hukou* status in China]{.mark} [@wu2026teache].
+Within schooling systems, students from different socioeconomic status (SES) backgrounds enter the school system with unequal amounts of cultural capital[^1], the dispositions underpinning it being accumulated through socialisation and carried into daily practice [@tan2022typolo]. Working-class children, by virtue of their relative lack of capital, often experience schooling as alienating. This alienation can manifest as disinterest, disidentification, or withdrawal from participation [@williams2016aliena]. While these responses are shaped by structural positioning within the educational field, they may be internalised as individual deficiencies, leading students to perceive mathematics as "not for us" [@choudry2024power; @williams2016mathem]. Teachers are not outside the reproduction of disadvantage in schooling. Their beliefs have been shown to moderate how institutional markers of disadvantage bear on students, as when a growth-oriented teacher outlook narrows the gap associated with migrant *hukou* status in China [@wu2026teache].
 
 A recent meta-analysis of 326 empirical studies and 1,230 international assessment samples with over 5 million students found a moderate positive correlation between SES and academic achievement (with $r$ between .22 and .28) and showed that this association has strengthened since the 1990s [@liu2022socioe]. These findings indicate that structural inequality remains a pervasive feature of contemporary educational systems. Schools facing similar accountability regimes, parental expectations, and leadership structures, moreover, tend to converge on similar pedagogical practices even without direct contact, a process DiMaggio and Powell [-@dimaggio1983iron] termed institutional isomorphism. Nast's [-@nast2022bringi] ethnographic study of two German schools serving different SES communities, for instance, documented how sharply different demands from parents and from school leadership nonetheless pushed practice in convergent directions.
 
 Within mathematics education specifically, work on mathematical capital has shown that mathematics is itself a field in which capital is exchanged and advantage reproduced, with success in mathematics functioning as a convertible resource that schooling distributes unequally [@williams2016mathem]. If the mathematics classroom is such a site of reproduction, teachers' practices are plausibly among its mechanisms. We build on this view to ask, quantitatively, whether the extent to which teachers' self-reported teaching practices are connectionist is associated with the socioeconomic position of the school in which they work, that is, the socioeconomic standing of the community the school serves, operationalised later through neighbourhood housing prices.
 
-Direct evidence linking school SES to mathematics teaching is largely qualitative: @chen2012eighth in Taiwan and @zhao2020episte in mainland China describe more conceptually oriented instruction in higher-SES settings and more rote, transmissionist instruction in lower-SES ones. Quantitative multilevel work has mostly addressed adjacent outcomes, such as classroom climate, teacher efficacy, and general instructional quality (see, e.g., @chzhen2023why; @holzberger2021teache; @dewulf2022qualit). [Teachers' beliefs and their school's socioeconomic setting have been modelled together before]{.mark} [@flint2025belief]: [in a study of 707 primary teachers, school socioeconomic status bore on instructional practice largely through beliefs rather than beside them. The present study instead treats school-level SES as a predictor at its own level and weighs it against teachers' beliefs as correlates of mathematics-specific connectionist practice]{.mark}.
+Direct evidence linking school SES to mathematics teaching is largely qualitative: @chen2012eighth in Taiwan and @zhao2020episte in mainland China describe more conceptually oriented instruction in higher-SES settings and more rote, transmissionist instruction in lower-SES ones. Quantitative multilevel work has mostly addressed adjacent outcomes, such as classroom climate, teacher efficacy, and general instructional quality (see, e.g., @chzhen2023why; @holzberger2021teache; @dewulf2022qualit). Teachers' beliefs and their school's socioeconomic setting have been modelled together before [@flint2025belief]: in a study of 707 primary teachers, school socioeconomic status bore on instructional practice largely through beliefs rather than beside them. The present study instead treats school-level SES as a predictor at its own level and weighs it against teachers' beliefs as correlates of mathematics-specific connectionist practice.
 
 ## The Context of this Study
 
@@ -189,6 +218,7 @@ Housing price (log),9.44,0.42,
 )---", check.names = FALSE, colClasses = "character")
 sd_tab[is.na(sd_tab)] <- ""
 sd_tab[] <- lapply(sd_tab, function(x) gsub("%", "\\\\%", x))
+if (knitr::is_latex_output()) {
 kbl(sd_tab,
     format    = "latex",
     booktabs  = TRUE,
@@ -206,6 +236,11 @@ kbl(sd_tab,
   footnote(general_title = "Note.",
            general = "The reported data for connectionist practice and belief dimensions (general belief, belief about mathematics, belief about learners, and belief about pedagogy) are based on the first of eight sets of plausible values. Means (M) and standard deviations (SD) are reported for continuous variables; dummy-coded categorical variables (gender, year group, district) report proportions (prop), ranging from 0 to 1. Housing price is log-transformed. Missingness is presented as count (percentage) of teachers and is reported only for variables with missing data. The sample includes one virtual school assigned to teachers who did not report their actual school; for that case, school-level variables were imputed using the mean values from the other schools.",
            threeparttable = TRUE, footnote_as_chunk = FALSE)
+} else word_tbl(sd_tab, c("Variable", "$M$ / prop.", "$SD$", "Missing"),
+           groups = list("Teacher level (n = 155)" = c(1, 18), "School level (n = 36, incl. one virtual school)" = c(19, 24)),
+           indent = c(7, 8, 10, 11, 12, 14, 15, 16, 17, 18, 20, 21, 22),
+           note = "The reported data for connectionist practice and belief dimensions (general belief, belief about mathematics, belief about learners, and belief about pedagogy) are based on the first of eight sets of plausible values. Means (M) and standard deviations (SD) are reported for continuous variables; dummy-coded categorical variables (gender, year group, district) report proportions (prop), ranging from 0 to 1. Housing price is log-transformed. Missingness is presented as count (percentage) of teachers and is reported only for variables with missing data. The sample includes one virtual school assigned to teachers who did not report their actual school; for that case, school-level variables were imputed using the mean values from the other schools.",
+           escape = FALSE)
 ```
 
 ## Measures and other explanatory variables
@@ -256,7 +291,7 @@ Unlike frequentist IRT, which provides only point estimates, the BIRT models yie
 
 Because teachers are clustered within schools, we used multilevel modelling. This raises a sample-size concern: maximum-likelihood (ML) guidance often treats about 30 clusters as a working minimum, below which estimation can become unstable, yielding convergence problems or boundary estimates [@bickel2007multil; @maas2005suffic]. Our case sits at this borderline, with an average of 4.31 teachers per school, so school-level inference is limited and the between-school estimates, subject to shrinkage, are read with caution.
 
-We therefore estimated the models in a Bayesian framework with weakly informative priors. Bayesian estimation is advantageous for multilevel analyses with relatively small numbers of higher-level units because partial pooling and prior regularisation stabilise estimation without relying solely on large-sample asymptotic approximations [@zitzmann2021perfor]. [Multilevel studies of teachers commonly separate teacher- from school-level influences and use intraclass correlations to justify the hierarchical specification]{.mark} [@holter2026collec]. Because none of our models estimate random slopes, the effective minimum drops to around 20 clusters [@hox2020small]. The Bayesian framework also reports full posterior distributions with 95% credible intervals (CrI) rather than relying on *p*-values and binary significance decisions, giving a more complete account of uncertainty over the parameters [@kruschke2010bayesi; @mcelreath2018statisa].
+We therefore estimated the models in a Bayesian framework with weakly informative priors. Bayesian estimation is advantageous for multilevel analyses with relatively small numbers of higher-level units because partial pooling and prior regularisation stabilise estimation without relying solely on large-sample asymptotic approximations [@zitzmann2021perfor]. Multilevel studies of teachers commonly separate teacher- from school-level influences and use intraclass correlations to justify the hierarchical specification [@holter2026collec]. Because none of our models estimate random slopes, the effective minimum drops to around 20 clusters [@hox2020small]. The Bayesian framework also reports full posterior distributions with 95% credible intervals (CrI) rather than relying on *p*-values and binary significance decisions, giving a more complete account of uncertainty over the parameters [@kruschke2010bayesi; @mcelreath2018statisa].
 
 All Bayesian analyses used the brms package in R [@burkner2017brmsb]. We fitted four Bayesian multilevel models of connectionist practice, with teachers at level 1 and schools at level 2. All four models share the same covariates: gender, year group, and perceived class attainment at the teacher level, and school resource, housing price, and district at the school level. The models are nested:
 
@@ -299,6 +334,7 @@ tab <- read.csv(text = r"---("Parameter","Model 1","Model 2","Model 3","Model 4"
 "LOOIC","449.6","452.5","433.6","435.8"
 )---", check.names = FALSE)
 tab[is.na(tab)] <- ""
+if (knitr::is_latex_output()) {
 kbl(tab,
     format    = "latex",
     booktabs  = TRUE,
@@ -322,6 +358,15 @@ kbl(tab,
   footnote(general_title = "Note.",
            general = "95% CrI refers to Bayesian credible intervals. Bold estimates indicate credible effects, defined as 95% CrI excluding zero. Reference categories are male (Gender), Year 7, and District 1. All continuous variables were standardised, so each coefficient is the expected change for a one-SD increase in the predictor. Perceived attainment was modelled as a monotonic effect; its estimate is the expected average step size between adjacent levels (with five levels, the total effect from level 1 to 5 is the estimate multiplied by 4). LOOIC (leave-one-out information criterion) assesses predictive accuracy, with lower values indicating better fit. All models converged well (R-hat < 1.05) with acceptable diagnostics (all Pareto k < 0.7; see https://github.com/lukezed/Bayesian_MLM_connectionist for full output).",
            threeparttable = TRUE, footnote_as_chunk = FALSE)
+} else word_tbl(tab, c("Parameter",
+                  "\\shortstack{Model 1:\\\\General\\\\belief only}",
+                  "\\shortstack{Model 2:\\\\Belief with\\\\specific dimensions}",
+                  "\\shortstack{Model 3:\\\\Year group $\\times$\\\\housing price}",
+                  "\\shortstack{Model 4:\\\\Full\\\\interaction}"),
+           groups = list("Teacher level (L1)" = c(1, 8), "School level (L2)" = c(9, 12), "Interaction terms" = c(13, 15), "Random effect" = c(16, 16), "Model fit" = c(17, 18)),
+           indent = NULL,
+           note = "95% CrI refers to Bayesian credible intervals. Bold estimates indicate credible effects, defined as 95% CrI excluding zero. Reference categories are male (Gender), Year 7, and District 1. All continuous variables were standardised, so each coefficient is the expected change for a one-SD increase in the predictor. Perceived attainment was modelled as a monotonic effect; its estimate is the expected average step size between adjacent levels (with five levels, the total effect from level 1 to 5 is the estimate multiplied by 4). LOOIC (leave-one-out information criterion) assesses predictive accuracy, with lower values indicating better fit. All models converged well (R-hat < 1.05) with acceptable diagnostics (all Pareto k < 0.7; see https://github.com/lukezed/Bayesian_MLM_connectionist for full output).",
+           escape = FALSE)
 ```
 
 Joint multilevel models predicting teachers' connectionist practice, pooled across the 40 imputed datasets.
@@ -354,6 +399,7 @@ ctab <- read.csv(text = r"---("Year group","Model 3: Year group $\times$ housing
 "Year 9 $\times$ Housing price","0.02 [-0.41, 0.36]","-0.01 [-0.40, 0.37]"
 )---", check.names = FALSE)
 ctab[is.na(ctab)] <- ""
+if (knitr::is_latex_output()) {
 kbl(ctab,
     format    = "latex",
     booktabs  = TRUE,
@@ -371,6 +417,13 @@ kbl(ctab,
   footnote(general_title = "Note.",
            general = "Each cell reports the marginal slope of log-housing-price at the indicated year group, that is, the main effect of housing price plus its interaction with that year group. Bold estimates denote credible effects (95% CrI excluding zero).",
            threeparttable = TRUE, footnote_as_chunk = FALSE)
+} else word_tbl(ctab, c("Year group",
+                  "\\shortstack{Model 3:\\\\Year group $\\times$\\\\housing price}",
+                  "\\shortstack{Model 4:\\\\Full\\\\interaction}"),
+           groups = NULL,
+           indent = NULL,
+           note = "Each cell reports the marginal slope of log-housing-price at the indicated year group, that is, the main effect of housing price plus its interaction with that year group. Bold estimates denote credible effects (95% CrI excluding zero).",
+           escape = FALSE)
 ```
 
 Marginal effect of school housing price on connectionist practice by year group.
@@ -447,10 +500,6 @@ Read through a Bourdieusian lens, teachers enact their beliefs within institutio
 
 \newpage
 
-# Declaration of generative AI and AI-assisted technologies in the manuscript preparation process {.unnumbered}
-
-During the preparation of this work the authors used Claude (Anthropic) for proofreading purposes. After using this tool, the authors reviewed and edited the content as needed and take full responsibility for the content of the published article.
-
 # References {.unnumbered}
 
 ::: {#refs}
@@ -493,6 +542,7 @@ pit <- read.csv(text = r"---("Item","Statement"
 "P_25_r*","I go through only one method for doing each question."
 "P_26","I allow students to work at their own pace."
 )---", check.names = FALSE)
+if (knitr::is_latex_output()) {
 kbl(pit,
     format    = "latex",
     booktabs  = TRUE,
@@ -506,6 +556,11 @@ kbl(pit,
   footnote(general_title = "Note.",
            general = "Teachers reported the frequency with which they implement each practice on a 5-point Likert scale from 1 (almost never) to 5 (almost always). Items marked _r are reverse-coded; items marked * were removed during validation.",
            threeparttable = TRUE, footnote_as_chunk = FALSE)
+} else word_tbl(pit, c("Item", "Statement"),
+           groups = NULL,
+           indent = NULL,
+           note = "Teachers reported the frequency with which they implement each practice on a 5-point Likert scale from 1 (almost never) to 5 (almost always). Items marked _r are reverse-coded; items marked * were removed during validation.",
+           escape = TRUE)
 ```
 
 Items used in the connectionist practice instrument.
@@ -542,6 +597,7 @@ bit <- read.csv(text = r"---("Item","Statement"
 "Bc_4","Teachers should help students using mathematics to critically analyse the world."
 "Bc_5","Discussion of social issues should be involved in the maths classroom."
 )---", check.names = FALSE)
+if (knitr::is_latex_output()) {
 kbl(bit,
     format    = "latex",
     booktabs  = TRUE,
@@ -558,6 +614,11 @@ kbl(bit,
   footnote(general_title = "Note.",
            general = "Teachers indicated their level of agreement with each statement on a 5-point Likert scale from 1 (strongly disagree) to 5 (strongly agree). Items are grouped into beliefs about mathematics (Ba), learners (Bb), and pedagogy (Bc). Items marked _r are reverse-coded; items marked * were removed during validation.",
            threeparttable = TRUE, footnote_as_chunk = FALSE)
+} else word_tbl(bit, c("Item", "Statement"),
+           groups = list("Beliefs about mathematics" = c(1, 8), "Beliefs about learners" = c(9, 19), "Beliefs about pedagogy" = c(20, 24)),
+           indent = NULL,
+           note = "Teachers indicated their level of agreement with each statement on a 5-point Likert scale from 1 (strongly disagree) to 5 (strongly agree). Items are grouped into beliefs about mathematics (Ba), learners (Bb), and pedagogy (Bc). Items marked _r are reverse-coded; items marked * were removed during validation.",
+           escape = TRUE)
 ```
 
 Items used in the equity-belief instrument.
@@ -598,6 +659,7 @@ stab <- read.csv(text = r"---("Parameter","Narrow prior N(0,1)","Wide prior N(0,
 "School intercept SD","0.18 [0.01, 0.46]","0.18 [0.01, 0.47]"
 )---", check.names = FALSE)
 stab[is.na(stab)] <- ""
+if (knitr::is_latex_output()) {
 kbl(stab,
     format    = "latex",
     booktabs  = TRUE,
@@ -617,6 +679,11 @@ kbl(stab,
   footnote(general_title = "Note.",
            general = "Model 3 refitted with a narrower and a wider normal prior on the regression coefficients (prior SD 1 and 5, versus the default 3). Bold estimates indicate credible effects (95% CrI excluding zero). Estimates and the pattern of credible effects are stable across priors, indicating the findings are data-driven.",
            threeparttable = TRUE, footnote_as_chunk = FALSE)
+} else word_tbl(stab, c("Parameter", "Narrow prior $\\mathcal{N}(0, 1)$", "Wide prior $\\mathcal{N}(0, 5)$"),
+           groups = list("Teacher level (L1)" = c(1, 8), "School level (L2)" = c(9, 12), "Cross-level interactions" = c(13, 14), "Random effect" = c(15, 15)),
+           indent = NULL,
+           note = "Model 3 refitted with a narrower and a wider normal prior on the regression coefficients (prior SD 1 and 5, versus the default 3). Bold estimates indicate credible effects (95% CrI excluding zero). Estimates and the pattern of credible effects are stable across priors, indicating the findings are data-driven.",
+           escape = FALSE)
 ```
 
 Prior sensitivity analysis for Model 3.
