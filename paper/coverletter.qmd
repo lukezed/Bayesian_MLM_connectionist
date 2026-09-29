@@ -13,15 +13,17 @@ Faculty of Education, East China Normal University\
 chi.zhang.edu@gmail.com
 
 The Editors\
-*Social Psychology of Education*
+*Mathematics Education Research Journal*
 
 Dear Editors,
 
-We are submitting "Teacher Beliefs, School Context, and Reform-Oriented Teaching: A Bayesian Multilevel Study of Lower-Secondary Mathematics Teachers in China" for consideration in *Social Psychology of Education*.
+We are submitting "Teacher Beliefs, School Context, and Reform-Oriented Teaching: A Bayesian Multilevel Study of Lower-Secondary Mathematics Teachers in China" for consideration as a full-length article in *Mathematics Education Research Journal*.
 
-The paper takes up a question on the boundary between psychology and sociology. Educational reform commonly assumes that changing what teachers believe will change what they do in the classroom, while sociological accounts hold that the socioeconomic position of a school shapes teaching at least as much as individual conviction. Using original questionnaire data from 155 teachers across 35 schools, we relate teachers' equity beliefs and their school's socioeconomic position to reform-oriented (connectionist) practice in Bayesian multilevel models, and compare how much weight each carries. The belief association is modest and stable. The school-level association is larger where it is credible, and it reverses direction across year groups.
+Reform of mathematics teaching commonly assumes that changing what teachers believe will change how they teach. The paper tests that assumption for connectionist practice, the reform-oriented teaching that builds on students' own mathematical understandings and connects mathematical ideas with one another. Using original questionnaire data from 155 lower-secondary mathematics teachers across 35 schools in Wenzhou, China, we relate teachers' equity beliefs and their school's socioeconomic position to self-reported connectionist practice in Bayesian multilevel models.
 
-We think the paper suits the journal because its argument draws on both sides of that boundary: belief system theory and the attitude–behaviour literature on one side, Bourdieu's account of cultural capital and social reproduction on the other. The paper engages directly with recent work in the journal, including Flint et al. (2025), who modelled teachers' beliefs and school socioeconomic context together, and Wu (2026), on teacher beliefs and institutional markers of disadvantage in China. The analysis also carries measurement uncertainty from the item response models and missing-data uncertainty from imputation through to the substantive comparison.
+Two findings speak directly to mathematics teacher education. First, a general equity orientation was modestly associated with connectionist practice, whereas teachers' beliefs about mathematics, learners, and pedagogy showed no credible association once that orientation was accounted for. Read through belief system theory, the mathematics-specific beliefs appear peripheral to what these teachers do in the classroom. Second, the school's socioeconomic position carried more weight than beliefs where its association was credible, and its direction changed across year groups, which suggests that reform-oriented mathematics teaching depends on the conditions of the school as well as on the convictions of the teacher.
+
+The analysis also shows how measurement uncertainty from item response models and missing-data uncertainty from imputation can be carried through to substantive conclusions, which may be useful to others working with modest samples of mathematics teachers.
 
 The manuscript reports original data collected by the authors, is not under consideration elsewhere, and has been approved by both authors. The study received ethical approval from the University of Manchester Research Ethics Committee.
 
