@@ -9,6 +9,8 @@ data/
 .positai
 
 # revision working files (not for remote)
+# notes/ stays local: this repository is public and cited in the manuscript
+notes/
 paper/oldsubmission/
 plan.md
 .DS_Store
