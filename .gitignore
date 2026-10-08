@@ -28,3 +28,7 @@ paper/highlights.pdf
 paper/maintextIJER-MP.docx
 paper/maintextSeptMP.docx
 paper/coverletter.pdf
+
+# manuscript and submission files kept local
+paper/
+submission_IJED_*/
